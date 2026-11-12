@@ -1,1522 +1,1543 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hasil Analisis Kesiapan RME & Transformasi Digital 6 Puskesmas</title>
-  <style>
-    :root {
-      --primary: #0f6cbd;
-      --dark: #1f2937;
-      --muted: #6b7280;
-      --bg: #f3f4f6;
-      --white: #ffffff;
-      --border: #d1d5db;
-      --green: #16a34a;
-      --yellow: #d97706;
-      --red: #dc2626;
-      --light-green: #dcfce7;
-      --light-yellow: #fef3c7;
-      --light-red: #fee2e2;
-      --light-blue: #dbeafe;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1250px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0f6cbd, #084a83);
-      color: white;
-      padding: 32px 24px;
-      border-radius: 16px;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 2rem;
-      line-height: 1.3;
-    }
-
-    header p {
-      margin: 0;
-      opacity: 0.95;
-      font-size: 1rem;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--primary);
-      border-bottom: 3px solid var(--light-blue);
-      padding-bottom: 8px;
-      font-size: 1.5rem;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
-
-    h4 {
-      margin: 18px 0 8px;
-      color: var(--primary);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 14px 0 18px;
-      font-size: 0.96rem;
-    }
-
-    th, td {
-      border: 1px solid var(--border);
-      padding: 10px 12px;
-      vertical-align: top;
-      text-align: left;
-    }
-
-    th {
-      background: #e5eef8;
-      color: #123;
-    }
-
-    tbody tr:nth-child(even) {
-      background: #fafafa;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .toc ol {
-      margin: 8px 0 0 20px;
-      padding: 0;
-    }
-
-    .toc a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .toc a:hover {
-      text-decoration: underline;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: bold;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-
-    .green {
-      background: var(--light-green);
-      color: var(--green);
-    }
-
-    .yellow {
-      background: var(--light-yellow);
-      color: var(--yellow);
-    }
-
-    .red {
-      background: var(--light-red);
-      color: var(--red);
-    }
-
-    .callout {
-      background: #f8fbff;
-      border-left: 6px solid var(--primary);
-      padding: 16px;
-      border-radius: 10px;
-      margin: 16px 0;
-    }
-
-    .callout.warning {
-      background: #fff8eb;
-      border-left-color: var(--yellow);
-    }
-
-    .callout.danger {
-      background: #fff5f5;
-      border-left-color: var(--red);
-    }
-
-    .callout.success {
-      background: #f3fff6;
-      border-left-color: var(--green);
-    }
-
-    ul, ol {
-      margin: 8px 0 16px 22px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .puskesmas-box {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
-      margin: 18px 0;
-      background: #fcfcfd;
-    }
-
-    .section-note {
-      font-style: italic;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      padding: 20px 0 10px;
-    }
-
-    @media print {
-      body {
-        background: white;
-      }
-
-      .card {
-        box-shadow: none;
-        border: 1px solid #ccc;
-        page-break-inside: avoid;
-      }
-
-      header {
-        background: #0f6cbd;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasil Analisis Kesiapan RME &amp; Transformasi Digital 6 Puskesmas</title>
+<style>
+:root{--primary:#0f6cbd;--dark:#1f2937;--muted:#6b7280;--bg:#f3f4f6;--white:#fff;--border:#d1d5db;--green:#16a34a;--yellow:#d97706;--red:#dc2626;--light-green:#dcfce7;--light-yellow:#fef3c7;--light-red:#fee2e2;--light-blue:#dbeafe}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+.container{max-width:1250px;margin:0 auto;padding:24px}
+header{background:linear-gradient(135deg,#0f6cbd,#084a83);color:#fff;padding:32px 24px;border-radius:16px;margin-bottom:24px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+header h1{margin:0 0 10px;font-size:2rem;line-height:1.3}
+header p{margin:0;opacity:.95}
+.card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:24px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+h2{margin-top:0;color:var(--primary);border-bottom:3px solid var(--light-blue);padding-bottom:8px;font-size:1.5rem}
+h3{margin-bottom:10px;font-size:1.15rem}
+h4{margin:18px 0 8px;color:var(--primary)}
+table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:.96rem}
+th,td{border:1px solid var(--border);padding:10px 12px;vertical-align:top;text-align:left}
+th{background:#e5eef8;color:#123}
+tbody tr:nth-child(even){background:#fafafa}
+.toc ol{margin:8px 0 0 20px;padding:0}
+.toc a{color:var(--primary);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.82rem;font-weight:700;margin-right:8px;vertical-align:middle}
+.green{background:var(--light-green);color:var(--green)}
+.yellow{background:var(--light-yellow);color:var(--yellow)}
+.red{background:var(--light-red);color:var(--red)}
+.callout{background:#f8fbff;border-left:6px solid var(--primary);padding:16px;border-radius:10px;margin:16px 0}
+.callout.warning{background:#fff8eb;border-left-color:var(--yellow)}
+.callout.danger{background:#fff5f5;border-left-color:var(--red)}
+.callout.success{background:#f3fff6;border-left-color:var(--green)}
+ul,ol{margin:8px 0 16px 22px}
+li{margin-bottom:8px}
+.puskesmas-box{border:1px solid var(--border);border-radius:14px;padding:18px;margin:18px 0;background:#fcfcfd}
+.section-note{font-style:italic;color:var(--muted);margin-bottom:16px}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:20px 0 10px}
+.back-to-toc{margin:-6px 0 14px;font-size:.9rem}
+.back-to-toc a{color:var(--primary);text-decoration:none}
+.back-to-toc a:hover{text-decoration:underline}
+.back-to-toc.bottom{margin-top:18px;margin-bottom:0}
+.floating-toc{position:fixed;right:18px;bottom:18px;z-index:9999;background:var(--primary);color:#fff;padding:10px 14px;border-radius:999px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:.9rem}
+.floating-toc:hover{background:#084a83}
+html{scroll-behavior:smooth}
+section[id],div[id]{scroll-margin-top:16px}
+@media print{
+.floating-toc,.back-to-toc{display:none!important}
+body{background:#fff}
+.card{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid}
+header{background:#0f6cbd;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
 
-    <header>
-      <h1>Hasil Analisis Kesiapan RME &amp; Transformasi Digital</h1>
-      <p>6 Puskesmas — Survei November 2026</p>
-    </header>
+<header>
+<h1>Hasil Analisis Kesiapan RME &amp; Transformasi Digital</h1>
+<p>6 Puskesmas — Survei November 2026</p>
+</header>
 
-    <section class="card toc">
-      <h2>Daftar Isi</h2>
-      <ol>
-        <li><a href="#executive-summary">Executive Summary</a></li>
-        <li><a href="#profil-singkat">Profil Singkat 6 Puskesmas</a></li>
-        <li><a href="#resume-insight">Resume &amp; Insight per Dimensi</a></li>
-        <li><a href="#as-is">Analisis Kondisi As-Is (Menyeluruh)</a></li>
-        <li><a href="#to-be">Analisis Kondisi To-Be (Menyeluruh)</a></li>
-        <li><a href="#detil-puskesmas">Detil per Puskesmas: AS-IS vs TO-BE</a></li>
-        <li><a href="#rekomendasi">Rekomendasi Strategis</a></li>
-      </ol>
-    </section>
+<section id="daftar-isi" class="card toc">
+<h2>Daftar Isi</h2>
+<ol>
+<li><a href="#latar-belakang">Latar Belakang</a></li>
+<li><a href="#maksud-tujuan">Maksud &amp; Tujuan</a></li>
+<li><a href="#ruang-lingkup">Ruang Lingkup</a></li>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#profil-singkat">Profil Singkat 6 Puskesmas</a></li>
+<li><a href="#resume-insight">Resume &amp; Insight per Dimensi</a></li>
+<li><a href="#as-is">Analisis Kondisi As-Is (Menyeluruh)</a></li>
+<li><a href="#to-be">Analisis Kondisi To-Be (Menyeluruh)</a></li>
+<li><a href="#gap-analisis">GAP Analisis per Puskesmas</a></li>
+<li><a href="#rekomendasi">Rekomendasi Strategis</a></li>
+</ol>
+</section>
 
-    <section id="executive-summary" class="card">
-      <h2>📊 Executive Summary</h2>
-      <p>
-        Survei kesiapan digital di 6 Puskesmas menunjukkan tingkat kematangan (<em>digital maturity</em>) yang sangat beragam.
-        Secara umum, puskesmas telah berhasil mencapai tonggak penting berupa
-        <strong>integrasi dengan platform nasional (SATUSEHAT dan P-Care BPJS)</strong>
-        serta memiliki kualitas data klinis (NIK, ICD-10) yang sangat baik.
-      </p>
-      <p>
-        Namun, terdapat <strong>kesenjangan struktural yang mencolok</strong> pada aspek tata kelola dasar,
-        infrastruktur fisik (listrik &amp; internet), ketersediaan SDM khusus (Perekam Medis/IT),
-        serta dukungan payung hukum dari Pemerintah Daerah. Puskesmas seperti <strong>Maleber</strong>
-        menonjol sebagai praktik terbaik (<em>best practice</em>) dengan dokumentasi dan tata kelola yang kuat,
-        sementara <strong>Cilebak</strong> dan <strong>Bener</strong> menghadapi kendala fundamental
-        yang membutuhkan intervensi segera dari Dinas Kesehatan maupun Pemerintah Daerah.
-        Beban kerja petugas juga masih diperberat oleh kewajiban <em>input ganda</em>
-        ke berbagai aplikasi program vertikal yang belum terintegrasi penuh.
-      </p>
-    </section>
+<section id="latar-belakang" class="card">
+<h2>📌 Latar Belakang</h2>
+<ul>
+<li><strong>Permenkes 24/2022</strong> mewajibkan RME di semua fasyankes, termasuk Puskesmas — terstandar, interoperabel, aman, terintegrasi SATUSEHAT.</li>
+<li><strong>Data kesehatan besar</strong>, tetapi format dan standar pencatatan berbeda antar-fasilitas — pertukaran data dan integrasi sistem terhambat.</li>
+<li><strong>SATUSEHAT</strong> menjadi jalur pertukaran rekam kesehatan antar-fasyankes; Puskesmas tanpa sistem sendiri difasilitasi SIKDA Generik.</li>
+<li><strong>Banyak program berjalan</strong> (ILP, CKG/PKG) tanpa satu standar data — gap antara data yang diinput dan kebutuhan pelaporan kinerja Kemenkes sulit dikenali.</li>
+<li><strong>Disparitas antar-daerah nyata</strong> (infrastruktur, SDM, pembiayaan) — standar data dan peta jalan harus disusun dari assessment kondisi riil Puskesmas.</li>
+</ul>
+</section>
 
-    <section id="profil-singkat" class="card">
-      <h2>🏥 Profil Singkat 6 Puskesmas</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Puskesmas</th>
-            <th>Kab/Kota</th>
-            <th>Provinsi</th>
-            <th>Profil Singkat</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>MALEBER</strong></td>
-            <td>Kuningan</td>
-            <td>Jawa Barat</td>
-            <td><span class="badge green">Best Practice</span>Tata kelola rapi, bukti lengkap, SDM IT &amp; RM khusus, regulasi daerah mendukung. Kendala: anggaran IT sangat minim (Rp 1,6 jt/th).</td>
-          </tr>
-          <tr>
-            <td><strong>NARMADA</strong></td>
-            <td>Lombok Barat</td>
-            <td>NTB</td>
-            <td><span class="badge yellow">Menengah</span>Integrasi SATUSEHAT &amp; P-Care baik. Terkendala validitas NIK, infrastruktur luar gedung, dan data backup di vendor.</td>
-          </tr>
-          <tr>
-            <td><strong>PANGGANG I</strong></td>
-            <td>Gunung Kidul</td>
-            <td>DI Yogyakarta</td>
-            <td><span class="badge yellow">Menengah</span>Mengandalkan server Dinkes (Smarthealth) dan internet seluler. Beban <em>double entry</em> tinggi (5 aplikasi vertikal).</td>
-          </tr>
-          <tr>
-            <td><strong>SEDAU</strong></td>
-            <td>Lombok Barat</td>
-            <td>NTB</td>
-            <td><span class="badge yellow">Menengah</span>Kesiapan sistem &amp; integrasi baik. Terkendala komunikasi vendor, belum ada SOP perlindungan data, gangguan internet 5 hari/bulan.</td>
-          </tr>
-          <tr>
-            <td><strong>CILEBAK</strong></td>
-            <td>Kuningan</td>
-            <td>Jawa Barat</td>
-            <td><span class="badge red">Kritis</span>Kendala terberat. Tidak ada SK/SOP/IT/RM, listrik padam 25-30x/bulan, internet seluler, tidak ada dukungan regulasi daerah.</td>
-          </tr>
-          <tr>
-            <td><strong>BENER</strong></td>
-            <td>Purworejo</td>
-            <td>Jawa Tengah</td>
-            <td><span class="badge red">Data Belum Lengkap</span>Data survei banyak belum diisi (diisi konsultan SCA). Indikasi kesiapan administrasi &amp; pemantauan internal lemah.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+<section id="maksud-tujuan" class="card">
+<h2>🎯 Maksud &amp; Tujuan</h2>
+<h3>Maksud</h3>
+<p>Menyusun standar variabel data Puskesmas dan peta jalan strategi implementasi RME Puskesmas.</p>
+<h3>Tujuan</h3>
+<ul>
+<li>Tersedianya standar data pencatatan &amp; pelaporan Puskesmas yang selaras ILP, CKG dan program berjalan — dipakai Puskesmas, Dinkes, Kemenkes, dan pengembang sistem informasi.</li>
+<li>Tersedianya roadmap strategi seluruh tahapan implementasi RME sesuai karakteristik/disparitas Puskesmas.</li>
+<li>Tersedianya rekomendasi penetapan standar data Puskesmas dari kajian peraturan yang ada.</li>
+</ul>
+</section>
 
-    <section id="resume-insight" class="card">
-      <h2>📑 Resume &amp; Insight per Dimensi</h2>
+<section id="ruang-lingkup" class="card">
+<h2>📦 Ruang Lingkup</h2>
+<ul>
+<li><strong>Perencanaan:</strong> project charter, rencana pelaksanaan, monev, koordinasi.</li>
+<li><strong>Assessment proses bisnis</strong> CKG (termasuk komunitas) &amp; ILP, serta kondisi awal Puskesmas: infrastruktur TI, sistem informasi, SDM, pembiayaan — termasuk layanan luar gedung/Posyandu.</li>
+<li><strong>Review kebutuhan indikator pusat</strong> (termasuk kelahiran/kematian untuk PS2H) dan reformulasi pencatatan luar gedung.</li>
+<li><strong>Penyusunan standar variabel data Puskesmas</strong> serta review/kelengkapan playbook SATUSEHAT dan modul mandatori berbasis ILP.</li>
+<li><strong>Penyusunan peta jalan:</strong> identifikasi disparitas, analisis kesenjangan As-Is vs To-Be, segmentasi Puskesmas, strategi per segmen.</li>
+<li><strong>Rekomendasi arsitektur</strong> menuju satu sistem, rekomendasi kebijakan (policy brief), dan laporan periodik.</li>
+</ul>
+</section>
 
-      <h3>1. D1: Tata Kelola Strategi</h3>
-      <ul>
-        <li><strong>Resume:</strong> Mayoritas puskesmas telah memiliki fondasi tata kelola seperti SK Tim RME, SOP alur data, dan prosedur mitigasi gangguan sistem.</li>
-        <li><strong>Insight:</strong>
-          <ul>
-            <li><strong>Kesenjangan Tata Kelola:</strong> Cilebak adalah satu-satunya puskesmas yang belum memiliki SK Tim RME, SOP alur data digital, dan penanggung jawab data yang tertulis.</li>
-            <li><strong>Isu Keamanan &amp; Audit:</strong> Bener masih menggunakan akun bersama untuk antrian dan melaporkan tingkat kegagalan pengiriman data yang tinggi (&gt;30%), yang berisiko pada integritas data.</li>
-            <li><strong>Komitmen Perencanaan:</strong> Semua puskesmas telah memasukkan digitalisasi ke dalam RUK/RPK dan melakukan pemantauan rutin.</li>
-          </ul>
-        </li>
-      </ul>
+<section id="executive-summary" class="card">
+<h2>📊 Executive Summary</h2>
+<p>
+Survei kesiapan digital di 6 Puskesmas menunjukkan tingkat kematangan (<em>digital maturity</em>) yang sangat beragam.
+Secara umum, puskesmas telah berhasil mencapai tonggak penting berupa
+<strong>integrasi dengan platform nasional (SATUSEHAT dan P-Care BPJS)</strong>
+serta memiliki kualitas data klinis (NIK, ICD-10) yang sangat baik.
+</p>
+<p>
+Namun, terdapat <strong>kesenjangan struktural yang mencolok</strong> pada aspek tata kelola dasar,
+infrastruktur fisik (listrik &amp; internet), ketersediaan SDM khusus (Perekam Medis/IT),
+serta dukungan payung hukum dari Pemerintah Daerah. Puskesmas seperti <strong>Maleber</strong>
+menonjol sebagai praktik terbaik (<em>best practice</em>) dengan dokumentasi dan tata kelola yang kuat,
+sementara <strong>Cilebak</strong> dan <strong>Bener</strong> menghadapi kendala fundamental
+yang membutuhkan intervensi segera dari Dinas Kesehatan maupun Pemerintah Daerah.
+Beban kerja petugas juga masih diperberat oleh kewajiban <em>input ganda</em>
+ke berbagai aplikasi program vertikal yang belum terintegrasi penuh.
+</p>
+</section>
 
-      <h3>2. D2: Pendanaan Investasi</h3>
-      <ul>
-        <li><strong>Resume:</strong> Pendanaan operasional TIK sangat bergantung pada BLUD dan BOK. Seluruh puskesmas optimis pendanaan akan aman untuk 2 tahun ke depan.</li>
-        <li><strong>Insight:</strong>
-          <ul>
-            <li><strong>Anggaran IT Minim &amp; Tidak Terdata:</strong> Alokasi anggaran IT sangat kecil dan tidak standar (Maleber: Rp 1,6 jt; Cilebak: Rp 11 jt; Sedau: Rp 21 jt). Bener dan Narmada bahkan belum mendata anggaran IT mereka.</li>
-            <li><strong>Beban Finansial Puskesmas:</strong> Biaya lisensi aplikasi (SIMPUS) ditanggung mandiri oleh Puskesmas tanpa subsidi khusus dari Dinkes.</li>
-            <li><strong>Kurangnya Dukungan Eksternal:</strong> Cilebak dan Panggang I tidak mendapatkan dukungan investasi maupun pendampingan dari Dinkes/NGO.</li>
-          </ul>
-        </li>
-      </ul>
+<section id="profil-singkat" class="card">
+<h2>🏥 Profil Singkat 6 Puskesmas</h2>
+<table>
+<thead>
+<tr>
+<th>Puskesmas</th>
+<th>Kab/Kota</th>
+<th>Provinsi</th>
+<th>Profil Singkat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MALEBER</strong></td>
+<td>Kuningan</td>
+<td>Jawa Barat</td>
+<td><span class="badge green">Best Practice</span>Tata kelola rapi, bukti lengkap, SDM IT &amp; RM khusus, regulasi daerah mendukung. Kendala: anggaran IT sangat minim (Rp 1,6 jt/th).</td>
+</tr>
+<tr>
+<td><strong>NARMADA</strong></td>
+<td>Lombok Barat</td>
+<td>NTB</td>
+<td><span class="badge yellow">Menengah</span>Integrasi SATUSEHAT &amp; P-Care baik. Terkendala validitas NIK, infrastruktur luar gedung, dan data backup di vendor.</td>
+</tr>
+<tr>
+<td><strong>PANGGANG I</strong></td>
+<td>Gunung Kidul</td>
+<td>DI Yogyakarta</td>
+<td><span class="badge yellow">Menengah</span>Mengandalkan server Dinkes (Smarthealth) dan internet seluler. Beban <em>double entry</em> tinggi (5 aplikasi vertikal).</td>
+</tr>
+<tr>
+<td><strong>SEDAU</strong></td>
+<td>Lombok Barat</td>
+<td>NTB</td>
+<td><span class="badge yellow">Menengah</span>Kesiapan sistem &amp; integrasi baik. Terkendala komunikasi vendor, belum ada SOP perlindungan data, gangguan internet 5 hari/bulan.</td>
+</tr>
+<tr>
+<td><strong>CILEBAK</strong></td>
+<td>Kuningan</td>
+<td>Jawa Barat</td>
+<td><span class="badge red">Kritis</span>Kendala terberat. Tidak ada SK/SOP/IT/RM, listrik padam 25-30x/bulan, internet seluler, tidak ada dukungan regulasi daerah.</td>
+</tr>
+<tr>
+<td><strong>BENER</strong></td>
+<td>Purworejo</td>
+<td>Jawa Tengah</td>
+<td><span class="badge red">Data Belum Lengkap</span>Data survei banyak belum diisi (diisi konsultan SCA). Indikasi kesiapan administrasi &amp; pemantauan internal lemah.</td>
+</tr>
+</tbody>
+</table>
+</section>
 
-      <h3>3. D3: Integrasi (Aplikasi, Data, Interoperabilitas)</h3>
-      <ul>
-        <li><strong>Resume:</strong> Bridging dengan SATUSEHAT dan P-Care BPJS telah berjalan. Kualitas data (pengisian NIK dan kode ICD-10/KFA) sudah di atas 95%.</li>
-        <li><strong>Insight:</strong>
-          <ul>
-            <li><strong>Beban Double Entry:</strong> Petugas masih harus menginput data secara manual ke aplikasi program vertikal yang belum bridging dengan SIMPUS (contoh di Panggang I: SITB, SIGA, SIHA, SIMONA; di Sedau: ASIK, SITB, BPJS, Sisrute, Klinisia).</li>
-            <li><strong>Penyebab Gagal Kirim:</strong> Kegagalan kirim ke SATUSEHAT murni disebabkan faktor eksternal: jaringan/listrik putus (Cilebak), NIK tidak valid (Narmada), atau kurang eksplorasi modul (Panggang I).</li>
-            <li><strong>Ekosistem Vendor:</strong> Terdapat beragam vendor (Medisy, e-Simkes, Infokes, Smarthealth) dengan kemampuan API yang berbeda, menyulitkan standardisasi data di tingkat kabupaten.</li>
-          </ul>
-        </li>
-      </ul>
+<section id="resume-insight" class="card">
+<h2>📑 Resume &amp; Insight per Dimensi</h2>
 
-      <h3>4. D4: Infrastruktur</h3>
-      <ul>
-        <li><strong>Resume:</strong> Infrastruktur fisik (listrik dan internet) menjadi titik lemah utama, terutama bagi puskesmas di daerah terpencil/kepulauan.</li>
-        <li><strong>Insight:</strong>
-          <ul>
-            <li><strong>Kerentanan Listrik &amp; Jaringan:</strong> Cilebak mengalami pemadaman listrik ekstrem (25-30 kali/bulan) dan hanya mengandalkan internet seluler. Panggang I juga sangat bergantung pada jaringan seluler.</li>
-            <li><strong>Keamanan Data (Backup):</strong> Kesadaran backup data masih rendah. Cilebak dan Narmada tidak punya backup mandiri (bergantung pada cloud vendor). Puskesmas lain masih melakukan backup manual berkala.</li>
-            <li><strong>Layanan Luar Gedung:</strong> Kendala blank spot sinyal memaksa petugas di Cilebak dan Panggang I kembali menggunakan kertas saat Posyandu/kunjungan rumah.</li>
-          </ul>
-        </li>
-      </ul>
+<h3>1. D1: Tata Kelola Strategi</h3>
+<ul>
+<li><strong>Resume:</strong> Mayoritas puskesmas telah memiliki fondasi tata kelola seperti SK Tim RME, SOP alur data, dan prosedur mitigasi gangguan sistem.</li>
+<li><strong>Insight:</strong>
+<ul>
+<li><strong>Kesenjangan Tata Kelola:</strong> Cilebak adalah satu-satunya puskesmas yang belum memiliki SK Tim RME, SOP alur data digital, dan penanggung jawab data yang tertulis.</li>
+<li><strong>Isu Keamanan &amp; Audit:</strong> Bener masih menggunakan akun bersama untuk antrian dan melaporkan tingkat kegagalan pengiriman data yang tinggi (&gt;30%), yang berisiko pada integritas data.</li>
+<li><strong>Komitmen Perencanaan:</strong> Semua puskesmas telah memasukkan digitalisasi ke dalam RUK/RPK dan melakukan pemantauan rutin.</li>
+</ul>
+</li>
+</ul>
 
-      <h3>5. D5: Kesiapan SDM</h3>
-      <ul>
-        <li><strong>Resume:</strong> Ketersediaan dan kompetensi SDM sangat timpang. Terdapat krisis SDM teknis di beberapa puskesmas.</li>
-        <li><strong>Insight:</strong>
-          <ul>
-            <li><strong>Krisis SDM di Cilebak:</strong> Tidak memiliki tenaga IT khusus maupun Perekam Medis/Koder. Kemampuan komputer dasar stafnya di bawah 50%.</li>
-            <li><strong>Kekuatan SDM:</strong> Maleber memiliki tim IT khusus (3 orang) dan Perekam Medis terlatih.</li>
-            <li><strong>Minimnya Pelatihan:</strong> Pelatihan spesifik RME/SATUSEHAT dan coding medis (ICD-10/9-CM) masih sangat minim dan belum menyasar seluruh tenaga kunci. Tidak ada super-user di Cilebak.</li>
-          </ul>
-        </li>
-      </ul>
+<h3>2. D2: Pendanaan Investasi</h3>
+<ul>
+<li><strong>Resume:</strong> Pendanaan operasional TIK sangat bergantung pada BLUD dan BOK. Seluruh puskesmas optimis pendanaan akan aman untuk 2 tahun ke depan.</li>
+<li><strong>Insight:</strong>
+<ul>
+<li><strong>Anggaran IT Minim &amp; Tidak Terdata:</strong> Alokasi anggaran IT sangat kecil dan tidak standar (Maleber: Rp 1,6 jt; Cilebak: Rp 11 jt; Sedau: Rp 21 jt). Bener dan Narmada bahkan belum mendata anggaran IT mereka.</li>
+<li><strong>Beban Finansial Puskesmas:</strong> Biaya lisensi aplikasi (SIMPUS) ditanggung mandiri oleh Puskesmas tanpa subsidi khusus dari Dinkes.</li>
+<li><strong>Kurangnya Dukungan Eksternal:</strong> Cilebak dan Panggang I tidak mendapatkan dukungan investasi maupun pendampingan dari Dinkes/NGO.</li>
+</ul>
+</li>
+</ul>
 
-      <h3>6. D6: Kebijakan Daerah</h3>
-      <ul>
-        <li><strong>Resume:</strong> Payung hukum dan dukungan kebijakan dari Pemerintah Daerah (Dinkes/Pemda) sangat bervariasi dan cenderung lemah.</li>
-        <li><strong>Insight:</strong>
-          <ul>
-            <li><strong>Absennya Regulasi Daerah:</strong> Bener dan Cilebak tidak memiliki Perbup/Perwali atau SK Kepala Dinkes yang secara spesifik mengatur RME, perlindungan data, maupun standar pelaporan daerah.</li>
-            <li><strong>Perlindungan Data Pribadi:</strong> Baru sebagian puskesmas (Bener, Maleber, Panggang I) yang memiliki SOP atau MoU/NDA terkait perlindungan data pasien dengan vendor. Cilebak dan Sedau belum memilikinya.</li>
-            <li><strong>Insentif SDM:</strong> Hanya Maleber dan Panggang I yang memiliki kebijakan insentif/penugasan khusus bagi SDM yang mengelola RME, yang sangat penting untuk mencegah turnover petugas IT.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+<h3>3. D3: Integrasi (Aplikasi, Data, Interoperabilitas)</h3>
+<ul>
+<li><strong>Resume:</strong> Bridging dengan SATUSEHAT dan P-Care BPJS telah berjalan. Kualitas data (pengisian NIK dan kode ICD-10/KFA) sudah di atas 95%.</li>
+<li><strong>Insight:</strong>
+<ul>
+<li><strong>Beban Double Entry:</strong> Petugas masih harus menginput data secara manual ke aplikasi program vertikal yang belum bridging dengan SIMPUS (contoh di Panggang I: SITB, SIGA, SIHA, SIMONA; di Sedau: ASIK, SITB, BPJS, Sisrute, Klinisia).</li>
+<li><strong>Penyebab Gagal Kirim:</strong> Kegagalan kirim ke SATUSEHAT murni disebabkan faktor eksternal: jaringan/listrik putus (Cilebak), NIK tidak valid (Narmada), atau kurang eksplorasi modul (Panggang I).</li>
+<li><strong>Ekosistem Vendor:</strong> Terdapat beragam vendor (Medisy, e-Simkes, Infokes, Smarthealth) dengan kemampuan API yang berbeda, menyulitkan standardisasi data di tingkat kabupaten.</li>
+</ul>
+</li>
+</ul>
 
-    <section id="as-is" class="card">
-      <h2>📋 Analisis Kondisi AS-IS (Menyeluruh — 6 Puskesmas)</h2>
-      <p class="section-note">
-        As-Is menggambarkan potret kondisi faktual saat ini berdasarkan data survei November 2026.
-        Analisis ini merangkum “apa yang sedang terjadi” secara kolektif di 6 Puskesmas.
-      </p>
+<h3>4. D4: Infrastruktur</h3>
+<ul>
+<li><strong>Resume:</strong> Infrastruktur fisik (listrik dan internet) menjadi titik lemah utama, terutama bagi puskesmas di daerah terpencil/kepulauan.</li>
+<li><strong>Insight:</strong>
+<ul>
+<li><strong>Kerentanan Listrik &amp; Jaringan:</strong> Cilebak mengalami pemadaman listrik ekstrem (25-30 kali/bulan) dan hanya mengandalkan internet seluler. Panggang I juga sangat bergantung pada jaringan seluler.</li>
+<li><strong>Keamanan Data (Backup):</strong> Kesadaran backup data masih rendah. Cilebak dan Narmada tidak punya backup mandiri (bergantung pada cloud vendor). Puskesmas lain masih melakukan backup manual berkala.</li>
+<li><strong>Layanan Luar Gedung:</strong> Kendala blank spot sinyal memaksa petugas di Cilebak dan Panggang I kembali menggunakan kertas saat Posyandu/kunjungan rumah.</li>
+</ul>
+</li>
+</ul>
 
-      <h3>D1 — Tata Kelola Strategi: AS-IS</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Aktual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>SK Tim RME</strong></td>
-            <td>5 dari 6 Puskesmas sudah memiliki SK Tim RME. Cilebak belum memiliki SK sama sekali. Bener memiliki SK (8 orang) namun diisi oleh konsultan, mengindikasikan kepemilikan internal yang lemah.</td>
-          </tr>
-          <tr>
-            <td><strong>SOP Alur Data Digital</strong></td>
-            <td>5 Puskesmas memiliki SOP lengkap (pendaftaran → pelayanan → farmasi → lab → pelaporan). Cilebak belum memiliki SOP alur data digital.</td>
-          </tr>
-          <tr>
-            <td><strong>Penanggung Jawab Data</strong></td>
-            <td>5 Puskesmas memiliki penanggung jawab tertulis. Cilebak tidak memiliki penanggung jawab tertulis.</td>
-          </tr>
-          <tr>
-            <td><strong>Perencanaan (RUK/RPK)</strong></td>
-            <td>Seluruh Puskesmas (6/6) telah memasukkan digitalisasi ke dalam perencanaan. Namun, Bener mencatat bahwa pelatihan tidak spesifik dan hanya mencakup sarpras dasar.</td>
-          </tr>
-          <tr>
-            <td><strong>Hak Akses &amp; Keamanan</strong></td>
-            <td>4 Puskesmas sudah menerapkan akun individual berbasis peran. Bener masih menggunakan akun bersama untuk antrian. Cilebak menggunakan akun bersama per cluster (posyandu, anak, dewasa) yang diakses banyak orang — risiko keamanan dan audit trail sangat tinggi.</td>
-          </tr>
-          <tr>
-            <td><strong>Pemantauan Rutin</strong></td>
-            <td>5 Puskesmas melakukan pemantauan rutin. Cilebak tidak melakukan pemantauan — data hanya dikirim ke link dan dicek oleh penerima. Bener mencatat &gt;30% kegagalan kirim ke SATUSEHAT akibat duplikat data.</td>
-          </tr>
-          <tr>
-            <td><strong>Prosedur Gangguan (Contingency)</strong></td>
-            <td>5 Puskesmas memiliki prosedur tertulis. Cilebak tidak memiliki prosedur formal — hanya mencatat manual di Excel saat aplikasi down, lalu input ulang setelah sistem pulih.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="callout warning">
-        <strong>Ringkasan As-Is D1:</strong><br>
-        Tata kelola strategi di 6 Puskesmas terbelah menjadi dua kutub: 5 Puskesmas yang relatif siap (dengan variasi kelengkapan)
-        dan 1 Puskesmas (Cilebak) yang belum memiliki fondasi tata kelola sama sekali. Bener, meski secara administratif terisi,
-        menunjukkan kelemahan pada aspek keamanan akun dan tingginya angka gagal kirim. Secara keseluruhan, tata kelola masih bersifat
-        <em>reactive</em> (menunggu gangguan) daripada <em>proactive</em> (audit &amp; pencegahan).
-      </div>
+<h3>5. D5: Kesiapan SDM</h3>
+<ul>
+<li><strong>Resume:</strong> Ketersediaan dan kompetensi SDM sangat timpang. Terdapat krisis SDM teknis di beberapa puskesmas.</li>
+<li><strong>Insight:</strong>
+<ul>
+<li><strong>Krisis SDM di Cilebak:</strong> Tidak memiliki tenaga IT khusus maupun Perekam Medis/Koder. Kemampuan komputer dasar stafnya di bawah 50%.</li>
+<li><strong>Kekuatan SDM:</strong> Maleber memiliki tim IT khusus (3 orang) dan Perekam Medis terlatih.</li>
+<li><strong>Minimnya Pelatihan:</strong> Pelatihan spesifik RME/SATUSEHAT dan coding medis (ICD-10/9-CM) masih sangat minim dan belum menyasar seluruh tenaga kunci. Tidak ada super-user di Cilebak.</li>
+</ul>
+</li>
+</ul>
 
-      <h3>D2 — Pendanaan &amp; Investasi: AS-IS</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Aktual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Sumber Dana</strong></td>
-            <td>Dominan dari BLUD dan BOK. Cilebak mengandalkan BOK (2026) dan akan beralih ke JKN (2027). Tidak ada sumber dana dari APBD murni atau CSR.</td>
-          </tr>
-          <tr>
-            <td><strong>Besaran Anggaran IT/Tahun</strong></td>
-            <td>Sangat timpang: Maleber Rp 1,6 jt; Panggang I Rp 9,96 jt; Cilebak Rp 11 jt; Sedau Rp 21 jt. Bener dan Narmada belum mengisi/tidak tahu besaran anggaran IT mereka.</td>
-          </tr>
-          <tr>
-            <td><strong>Biaya Lisensi Aplikasi</strong></td>
-            <td>Seluruh Puskesmas (6/6) menanggung sendiri biaya lisensi SIMPUS/RME (kisaran Rp 800.000/bulan). Tidak ada subsidi dari Dinkes Kabupaten.</td>
-          </tr>
-          <tr>
-            <td><strong>Rencana Pengadaan</strong></td>
-            <td>Semua Puskesmas menyatakan ada rencana pengadaan, namun sumber dana terbatas pada BOK, BLUD, SILPA, atau BOP. Tidak ada rencana pengadaan besar (server, jaringan fiber).</td>
-          </tr>
-          <tr>
-            <td><strong>Dukungan Dinkes/NGO</strong></td>
-            <td>Maleber, Narmada, Sedau mendapat dukungan Dinkes. Cilebak dan Panggang I tidak mendapat dukungan. Bener belum terdata. Sedau mencatat dukungan ada namun belum ada bukti.</td>
-          </tr>
-          <tr>
-            <td><strong>Kepastian Dana 2 Tahun</strong></td>
-            <td>Seluruh Puskesmas yang menjawab menyatakan “Pasti”, dengan mengandalkan JKN, BOK, atau BLUD.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="callout warning">
-        <strong>Ringkasan As-Is D2:</strong><br>
-        Pendanaan digitalisasi di 6 Puskesmas bersifat subsisten — hanya cukup untuk operasional minimum (internet + lisensi).
-        Tidak ada alokasi khusus untuk peningkatan kapasitas (upgrade hardware, pelatihan SDM, keamanan siber).
-        Ketergantungan pada BLUD membuat Puskesmas dengan pendapatan rendah (seperti Maleber) sangat rentan.
-        Absennya data anggaran di Bener dan Narmada mengindikasikan tidak adanya perencanaan keuangan IT yang terstruktur.
-      </div>
+<h3>6. D6: Kebijakan Daerah</h3>
+<ul>
+<li><strong>Resume:</strong> Payung hukum dan dukungan kebijakan dari Pemerintah Daerah (Dinkes/Pemda) sangat bervariasi dan cenderung lemah.</li>
+<li><strong>Insight:</strong>
+<ul>
+<li><strong>Absennya Regulasi Daerah:</strong> Bener dan Cilebak tidak memiliki Perbup/Perwali atau SK Kepala Dinkes yang secara spesifik mengatur RME, perlindungan data, maupun standar pelaporan daerah.</li>
+<li><strong>Perlindungan Data Pribadi:</strong> Baru sebagian puskesmas (Bener, Maleber, Panggang I) yang memiliki SOP atau MoU/NDA terkait perlindungan data pasien dengan vendor. Cilebak dan Sedau belum memilikinya.</li>
+<li><strong>Insentif SDM:</strong> Hanya Maleber dan Panggang I yang memiliki kebijakan insentif/penugasan khusus bagi SDM yang mengelola RME, yang sangat penting untuk mencegah turnover petugas IT.</li>
+</ul>
+</li>
+</ul>
+</section>
 
-      <h3>D3 — Integrasi (Aplikasi, Data, Interoperabilitas): AS-IS</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Aktual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Aplikasi SIMPUS</strong></td>
-            <td>6 Puskesmas menggunakan vendor berbeda: Medisy (Maleber), e-Simkes/Global Edutipa (Cilebak), E-Puskesmas NG/Infokes (Narmada), Smarthealth/Sisfomedika (Panggang I — server Dinkes), Epuskesmas V3/Infokes (Sedau), Cloud vendor (Bener). Fragmentasi vendor menyulitkan standardisasi.</td>
-          </tr>
-          <tr>
-            <td><strong>Input Ganda (Double Entry)</strong></td>
-            <td>Cilebak: 0 aplikasi tambahan. Maleber: 1 (CKG via GForm). Narmada: 1 (SSI). Panggang I: 5 aplikasi (Keswa, SIGA, SITB, SIHA, SIMONA). Sedau: 4 aplikasi (ASIK, SITB, BPJS, Sisrute, Klinisia). Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Integrasi SATUSEHAT</strong></td>
-            <td>Seluruh Puskesmas yang menjawab menyatakan terintegrasi. Modul yang terkirim bervariasi: Cilebak (10 modul), Sedau (18 modul — terlengkap), Maleber (3 modul), Narmada &amp; Panggang I (terintegrasi tanpa rincian).</td>
-          </tr>
-          <tr>
-            <td><strong>Tingkat Keberhasilan Kirim</strong></td>
-            <td>Maleber: 100%. Sedau: 98-100%. Narmada: 98% (kendala NIK). Cilebak: 90% (kendala listrik/jaringan). Panggang I: hanya 65,74% — penyebab: “tidak pernah dieksplor”. Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Bridging P-Care BPJS</strong></td>
-            <td>4 Puskesmas penuh (Cilebak, Maleber, Panggang I, Sedau). Narmada: sebagian (beberapa jenis input belum bridging). Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Ekspor Data / API</strong></td>
-            <td>Cilebak: Ekspor + API (API dipegang vendor). Maleber: API. Panggang I: Ekspor + API. Sedau: Ekspor. Narmada: Tidak ada. Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Kualitas Data</strong></td>
-            <td>NIK: 95-100%. ICD-10: 100%. ICD-9-CM: 100% (Maleber, Sedau). KFA: 100%. Cilebak mencatat ICD-9 jarang diisi karena jarang ada kasus tindakan, dan petugas kurang familiar dengan ICD-9.</td>
-          </tr>
-          <tr>
-            <td><strong>Master Data</strong></td>
-            <td>Maleber, Panggang I, Sedau: bisa diekspor. Cilebak &amp; Narmada: hanya bisa dilihat, campuran standar &amp; lokal.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="callout warning">
-        <strong>Ringkasan As-Is D3:</strong><br>
-        Secara teknis, integrasi SATUSEHAT dan P-Care sudah tercapai di hampir semua Puskesmas — ini merupakan capaian signifikan.
-        Namun, keberhasilan operasionalnya sangat bergantung pada infrastruktur (listrik, internet) dan kapasitas SDM.
-        Masalah terbesar bukan pada konektivitas, melainkan pada beban input ganda ke aplikasi program vertikal
-        dan rendahnya eksplorasi fitur di beberapa Puskesmas (Panggang I). Fragmentasi vendor juga menyulitkan Dinkes
-        dalam melakukan konsolidasi data di tingkat kabupaten.
-      </div>
+<section id="as-is" class="card">
+<h2>📋 Analisis Kondisi AS-IS (Menyeluruh — 6 Puskesmas)</h2>
+<p class="section-note">
+As-Is menggambarkan potret kondisi faktual saat ini berdasarkan data survei November 2026.
+Analisis ini merangkum “apa yang sedang terjadi” secara kolektif di 6 Puskesmas.
+</p>
 
-      <h3>D4 — Infrastruktur: AS-IS</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Aktual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Listrik</strong></td>
-            <td>Cilebak: PLN 2.250 VA, padam 25-30 kali/bulan, hanya Genset. Maleber: PLN 16.000 VA, padam 1x, Genset. Narmada: PLN 71.000 VA, padam 1x, UPS + Genset. Panggang I: UPS + Genset. Sedau: PLN 15.000 VA, UPS + Genset. Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Internet</strong></td>
-            <td>Cilebak: tidak ada WiFi/internet dedicated, hanya seluler. Maleber: SIMPATI 200 Mbps (4 HP). Narmada: MyRepublic 100 Mbps (gangguan 0-3 hari/bulan). Panggang I: seluler. Sedau: Indihome 300 Mbps (gangguan 5 hari/bulan). Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Perangkat</strong></td>
-            <td>Sebagian besar belum mengisi detail perangkat per unit layanan. Maleber mencatat 4 HP untuk internet.</td>
-          </tr>
-          <tr>
-            <td><strong>Backup Data</strong></td>
-            <td>Cilebak: belum ada backup. Narmada: backup di pihak vendor (tidak mandiri). Maleber: otomatis harian (terbaik). Panggang I &amp; Sedau: manual berkala. Bener belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Layanan Luar Gedung</strong></td>
-            <td>Cilebak: Tablet/HP/Laptop/Kertas — sering tidak ada sinyal. Maleber: Tablet/HP/Laptop (5 perangkat di Pustu). Narmada: Laptop. Panggang I: Tablet/HP/Laptop/Kertas. Sedau: Tablet/HP/Laptop.</td>
-          </tr>
-          <tr>
-            <td><strong>Akses Dukungan Teknis</strong></td>
-            <td>Cilebak: 1 hari kerja (jarak 50 km ke Dinkes). Maleber: &lt;5 menit (vendor lokal). Panggang I: 10 menit. Sedau: kendala komunikasi dengan vendor.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="callout danger">
-        <strong>Ringkasan As-Is D4:</strong><br>
-        Infrastruktur adalah bottleneck paling kritis bagi keberlanjutan RME. Cilebak menghadapi situasi darurat:
-        listrik padam hampir setiap hari, tidak ada internet dedicated, dan tidak ada backup data.
-        Panggang I bergantung sepenuhnya pada sinyal seluler yang tidak stabil. Bahkan Puskesmas yang relatif baik (Sedau)
-        masih mengalami gangguan internet 5 hari/bulan. Tidak ada satupun Puskesmas yang memiliki infrastruktur
-        yang sepenuhnya resilient terhadap gangguan listrik dan jaringan.
-      </div>
+<h3>D1 — Tata Kelola Strategi: AS-IS</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Aktual</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>SK Tim RME</strong></td><td>5 dari 6 Puskesmas sudah memiliki SK Tim RME. Cilebak belum memiliki SK sama sekali. Bener memiliki SK (8 orang) namun diisi oleh konsultan, mengindikasikan kepemilikan internal yang lemah.</td></tr>
+<tr><td><strong>SOP Alur Data Digital</strong></td><td>5 Puskesmas memiliki SOP lengkap (pendaftaran → pelayanan → farmasi → lab → pelaporan). Cilebak belum memiliki SOP alur data digital.</td></tr>
+<tr><td><strong>Penanggung Jawab Data</strong></td><td>5 Puskesmas memiliki penanggung jawab tertulis. Cilebak tidak memiliki penanggung jawab tertulis.</td></tr>
+<tr><td><strong>Perencanaan (RUK/RPK)</strong></td><td>Seluruh Puskesmas (6/6) telah memasukkan digitalisasi ke dalam perencanaan. Namun, Bener mencatat bahwa pelatihan tidak spesifik dan hanya mencakup sarpras dasar.</td></tr>
+<tr><td><strong>Hak Akses &amp; Keamanan</strong></td><td>4 Puskesmas sudah menerapkan akun individual berbasis peran. Bener masih menggunakan akun bersama untuk antrian. Cilebak menggunakan akun bersama per cluster (posyandu, anak, dewasa) yang diakses banyak orang — risiko keamanan dan audit trail sangat tinggi.</td></tr>
+<tr><td><strong>Pemantauan Rutin</strong></td><td>5 Puskesmas melakukan pemantauan rutin. Cilebak tidak melakukan pemantauan — data hanya dikirim ke link dan dicek oleh penerima. Bener mencatat &gt;30% kegagalan kirim ke SATUSEHAT akibat duplikat data.</td></tr>
+<tr><td><strong>Prosedur Gangguan (Contingency)</strong></td><td>5 Puskesmas memiliki prosedur tertulis. Cilebak tidak memiliki prosedur formal — hanya mencatat manual di Excel saat aplikasi down, lalu input ulang setelah sistem pulih.</td></tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan As-Is D1:</strong><br>
+Tata kelola strategi di 6 Puskesmas terbelah menjadi dua kutub: 5 Puskesmas yang relatif siap (dengan variasi kelengkapan)
+dan 1 Puskesmas (Cilebak) yang belum memiliki fondasi tata kelola sama sekali. Bener, meski secara administratif terisi,
+menunjukkan kelemahan pada aspek keamanan akun dan tingginya angka gagal kirim. Secara keseluruhan, tata kelola masih bersifat
+<em>reactive</em> (menunggu gangguan) daripada <em>proactive</em> (audit &amp; pencegahan).
+</div>
 
-      <h3>D5 — Kesiapan SDM: AS-IS</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Aktual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Tenaga IT/SIK</strong></td>
-            <td>Maleber: 3 orang khusus (1 magang hub, 1 PPPK PW, 1 BLUD). Sedau: 1 orang khusus. Panggang I: rangkap tugas. Cilebak: tidak ada. Narmada &amp; Bener: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Perekam Medis / Koder</strong></td>
-            <td>Maleber: 1 terlatih (PPPK PW). Panggang I: 1 terlatih. Cilebak: belum ada. Sedau: ada tapi belum terlatih. Narmada &amp; Bener: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Kemampuan Komputer</strong></td>
-            <td>Maleber &amp; Panggang I: &gt;80% lancar. Sedau: 50-80%. Cilebak: &lt;50% — hanya mampu operasi standar office.</td>
-          </tr>
-          <tr>
-            <td><strong>Pelatihan RME/SATUSEHAT</strong></td>
-            <td>Maleber: 1x pelatihan. Panggang I: 1x. Sedau: IT ikut pelatihan Dinkes. Cilebak: belum ada pelatihan (catatan: perekam medis belum termasuk standarisasi 13 tenaga dasar). Narmada &amp; Bener: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Beban Kerja</strong></td>
-            <td>Cilebak, Maleber, Panggang I: cukup. Maleber mencatat 0 jam input ganda/hari. Narmada, Sedau, Bener: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Super-User</strong></td>
-            <td>Maleber: ada. Sedau: ada. Cilebak: tidak ada (password di-sharing, kecuali rekam medis). Panggang I: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Dukungan Teknis</strong></td>
-            <td>Maleber: vendor Medisy, respons &lt;5 menit. Panggang I: Dinkes + vendor Smarthealth, cepat. Cilebak: tanya vendor (respons 1 hari). Sedau: belum terdata.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="callout danger">
-        <strong>Ringkasan As-Is D5:</strong><br>
-        Kesenjangan SDM adalah risiko keberlanjutan terbesar. Cilebak tidak memiliki satu pun tenaga IT maupun Perekam Medis —
-        seluruh operasional digital bergantung pada staf klinis yang kemampuan komputernya di bawah 50%.
-        Di sisi lain, Maleber menunjukkan bahwa keberadaan tenaga khusus (3 IT + 1 RM terlatih) berkorelasi langsung
-        dengan keberhasilan pengiriman data 100% dan respons teknis &lt;5 menit. Secara keseluruhan, pelatihan masih bersifat
-        one-off dan belum ada program pengembangan kapasitas yang berkelanjutan.
-      </div>
+<h3>D2 — Pendanaan &amp; Investasi: AS-IS</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Aktual</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Sumber Dana</strong></td><td>Dominan dari BLUD dan BOK. Cilebak mengandalkan BOK (2026) dan akan beralih ke JKN (2027). Tidak ada sumber dana dari APBD murni atau CSR.</td></tr>
+<tr><td><strong>Besaran Anggaran IT/Tahun</strong></td><td>Sangat timpang: Maleber Rp 1,6 jt; Panggang I Rp 9,96 jt; Cilebak Rp 11 jt; Sedau Rp 21 jt. Bener dan Narmada belum mengisi/tidak tahu besaran anggaran IT mereka.</td></tr>
+<tr><td><strong>Biaya Lisensi Aplikasi</strong></td><td>Seluruh Puskesmas (6/6) menanggung sendiri biaya lisensi SIMPUS/RME (kisaran Rp 800.000/bulan). Tidak ada subsidi dari Dinkes Kabupaten.</td></tr>
+<tr><td><strong>Rencana Pengadaan</strong></td><td>Semua Puskesmas menyatakan ada rencana pengadaan, namun sumber dana terbatas pada BOK, BLUD, SILPA, atau BOP. Tidak ada rencana pengadaan besar (server, jaringan fiber).</td></tr>
+<tr><td><strong>Dukungan Dinkes/NGO</strong></td><td>Maleber, Narmada, Sedau mendapat dukungan Dinkes. Cilebak dan Panggang I tidak mendapat dukungan. Bener belum terdata. Sedau mencatat dukungan ada namun belum ada bukti.</td></tr>
+<tr><td><strong>Kepastian Dana 2 Tahun</strong></td><td>Seluruh Puskesmas yang menjawab menyatakan “Pasti”, dengan mengandalkan JKN, BOK, atau BLUD.</td></tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan As-Is D2:</strong><br>
+Pendanaan digitalisasi di 6 Puskesmas bersifat subsisten — hanya cukup untuk operasional minimum (internet + lisensi).
+Tidak ada alokasi khusus untuk peningkatan kapasitas (upgrade hardware, pelatihan SDM, keamanan siber).
+Ketergantungan pada BLUD membuat Puskesmas dengan pendapatan rendah (seperti Maleber) sangat rentan.
+Absennya data anggaran di Bener dan Narmada mengindikasikan tidak adanya perencanaan keuangan IT yang terstruktur.
+</div>
 
-      <h3>D6 — Kebijakan Daerah: AS-IS</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Aktual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Kebijakan Daerah (Perbup/SK)</strong></td>
-            <td>Maleber: ada (Renstra sesuai Perkada). Panggang I: ada (SPBE, SE Dashboard Executive). Sedau: ada. Bener: tidak ada. Cilebak: tidak ada (catatan: saat FKPT memakai RME langsung eskalasi ke pusat). Narmada: belum terdata (ada catatan “Perbup Lombok Barat” tapi belum diisi).</td>
-          </tr>
-          <tr>
-            <td><strong>Peran Dinkes</strong></td>
-            <td>Maleber, Panggang I, Sedau: Dinkes mengelola. Cilebak: Puskesmas mandiri (e-dinkes hanya di Infokes, Cilebak pakai e-Simkes sendiri). Bener &amp; Narmada: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Format Pelaporan Daerah</strong></td>
-            <td>Maleber: ada (Perbup Kuningan No. 20/2025). Panggang I: ada (SPM, Stunting, TB, Dopadu, SIPD). Bener: tidak ada. Cilebak: tidak ada (hanya standar Kemenkes). Narmada &amp; Sedau: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Kerjasama Vendor &amp; Kepemilikan Data</strong></td>
-            <td>Bener, Maleber, Panggang I, Sedau: ada. Cilebak: tidak ada. Narmada: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Perlindungan Data Pribadi</strong></td>
-            <td>Bener: ada (MoU vendor). Maleber: ada (SOP). Panggang I: ada. Cilebak: tidak ada (hanya NDA dengan vendor). Sedau: tidak ada. Narmada: belum terdata.</td>
-          </tr>
-          <tr>
-            <td><strong>Insentif SDM RME</strong></td>
-            <td>Maleber: ada (SK Tim RME). Panggang I: ada. Narmada: ada catatan (SK Kadis Remunerasi BLUD). Bener: tidak. Cilebak: tidak. Sedau: tidak.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="callout warning">
-        <strong>Ringkasan As-Is D6:</strong><br>
-        Dukungan kebijakan daerah sangat fragmented dan tidak merata. Dalam satu kabupaten (Kuningan), dua Puskesmas memiliki kondisi
-        bertolak belakang: Maleber didukung Perbup dan Dinkes, sementara Cilebak dibiarkan mandiri tanpa payung hukum.
-        Tidak ada satupun kabupaten yang memiliki regulasi komprehensif yang mencakup seluruh aspek: RME, perlindungan data,
-        standar pelaporan, kepemilikan data, dan insentif SDM secara simultan. Ini menyebabkan setiap Puskesmas “meraba-raba” sendiri
-        dalam implementasi digitalisasi.
-      </div>
-    </section>
+<h3>D3 — Integrasi (Aplikasi, Data, Interoperabilitas): AS-IS</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Aktual</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Aplikasi SIMPUS</strong></td><td>6 Puskesmas menggunakan vendor berbeda: Medisy (Maleber), e-Simkes/Global Edutipa (Cilebak), E-Puskesmas NG/Infokes (Narmada), Smarthealth/Sisfomedika (Panggang I — server Dinkes), Epuskesmas V3/Infokes (Sedau), Cloud vendor (Bener). Fragmentasi vendor menyulitkan standardisasi.</td></tr>
+<tr><td><strong>Input Ganda (Double Entry)</strong></td><td>Cilebak: 0 aplikasi tambahan. Maleber: 1 (CKG via GForm). Narmada: 1 (SSI). Panggang I: 5 aplikasi (Keswa, SIGA, SITB, SIHA, SIMONA). Sedau: 4 aplikasi (ASIK, SITB, BPJS, Sisrute, Klinisia). Bener belum terdata.</td></tr>
+<tr><td><strong>Integrasi SATUSEHAT</strong></td><td>Seluruh Puskesmas yang menjawab menyatakan terintegrasi. Modul yang terkirim bervariasi: Cilebak (10 modul), Sedau (<strong>19 modul</strong> — terlengkap), Maleber (3 modul), Narmada &amp; Panggang I (terintegrasi tanpa rincian).</td></tr>
+<tr><td><strong>Tingkat Keberhasilan Kirim</strong></td><td>Maleber: 100%. Sedau: 98-100%. Narmada: 98% (kendala NIK). Cilebak: 90% (kendala listrik/jaringan). Panggang I: hanya 65,74% — penyebab: “tidak pernah dieksplor”. Bener belum terdata.</td></tr>
+<tr><td><strong>Bridging P-Care BPJS</strong></td><td>4 Puskesmas penuh (Cilebak, Maleber, Panggang I, Sedau). Narmada: sebagian (beberapa jenis input belum bridging). Bener belum terdata.</td></tr>
+<tr><td><strong>Ekspor Data / API</strong></td><td>Cilebak: Ekspor + API (API dipegang vendor). Maleber: API. Panggang I: Ekspor + API. Sedau: Ekspor. Narmada: Tidak ada. Bener belum terdata.</td></tr>
+<tr><td><strong>Kualitas Data</strong></td><td>NIK: 95-100%. ICD-10: 100%. ICD-9-CM: 100% (Maleber, Sedau). KFA: 100%. Cilebak mencatat ICD-9 jarang diisi karena jarang ada kasus tindakan, dan petugas kurang familiar dengan ICD-9.</td></tr>
+<tr><td><strong>Master Data</strong></td><td>Maleber, Panggang I, Sedau: bisa diekspor. Cilebak &amp; Narmada: hanya bisa dilihat, campuran standar &amp; lokal.</td></tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan As-Is D3:</strong><br>
+Secara teknis, integrasi SATUSEHAT dan P-Care sudah tercapai di hampir semua Puskesmas — ini merupakan capaian signifikan.
+Namun, keberhasilan operasionalnya sangat bergantung pada infrastruktur (listrik, internet) dan kapasitas SDM.
+Masalah terbesar bukan pada konektivitas, melainkan pada beban input ganda ke aplikasi program vertikal
+dan rendahnya eksplorasi fitur di beberapa Puskesmas (Panggang I). Fragmentasi vendor juga menyulitkan Dinkes
+dalam melakukan konsolidasi data di tingkat kabupaten.
+</div>
 
-    <section id="to-be" class="card">
-      <h2>🎯 Analisis Kondisi TO-BE (Menyeluruh — 6 Puskesmas)</h2>
-      <p class="section-note">
-        To-Be menggambarkan kondisi ideal yang harus dicapai oleh seluruh Puskesmas berdasarkan standar regulasi
-        (Permenkes 24/2022 tentang RME, Perpres 82/2023 tentang SATUSEHAT, Permenkes 43/2019 tentang Puskesmas,
-        dan best practices transformasi digital kesehatan).
-      </p>
+<h3>D4 — Infrastruktur: AS-IS</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Aktual</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Listrik</strong></td><td>Cilebak: PLN 2.250 VA, padam 25-30 kali/bulan, hanya Genset. Maleber: PLN 16.000 VA, padam 1x, Genset. Narmada: PLN 71.000 VA, padam 1x, UPS + Genset. Panggang I: UPS + Genset. Sedau: PLN 15.000 VA, UPS + Genset. Bener belum terdata.</td></tr>
+<tr><td><strong>Internet</strong></td><td>Cilebak: tidak ada WiFi/internet dedicated, hanya seluler. Maleber: SIMPATI 200 Mbps (4 HP). Narmada: MyRepublic 100 Mbps (gangguan 0-3 hari/bulan). Panggang I: seluler. Sedau: Indihome 300 Mbps (gangguan 5 hari/bulan). Bener belum terdata.</td></tr>
+<tr><td><strong>Perangkat</strong></td><td>Sebagian besar belum mengisi detail perangkat per unit layanan. Maleber mencatat 4 HP untuk internet.</td></tr>
+<tr><td><strong>Backup Data</strong></td><td>Cilebak: belum ada backup. Narmada: backup di pihak vendor (tidak mandiri). Maleber: otomatis harian (terbaik). Panggang I &amp; Sedau: manual berkala. Bener belum terdata.</td></tr>
+<tr><td><strong>Layanan Luar Gedung</strong></td><td>Cilebak: Tablet/HP/Laptop/Kertas — sering tidak ada sinyal. Maleber: Tablet/HP/Laptop (5 perangkat di Pustu). Narmada: Laptop. Panggang I: Tablet/HP/Laptop/Kertas. Sedau: Tablet/HP/Laptop.</td></tr>
+<tr><td><strong>Akses Dukungan Teknis</strong></td><td>Cilebak: 1 hari kerja (jarak 50 km ke Dinkes). Maleber: &lt;5 menit (vendor lokal). Panggang I: 10 menit. Sedau: kendala komunikasi dengan vendor.</td></tr>
+</tbody>
+</table>
+<div class="callout danger">
+<strong>Ringkasan As-Is D4:</strong><br>
+Infrastruktur adalah bottleneck paling kritis bagi keberlanjutan RME. Cilebak menghadapi situasi darurat:
+listrik padam hampir setiap hari, tidak ada internet dedicated, dan tidak ada backup data.
+Panggang I bergantung sepenuhnya pada sinyal seluler yang tidak stabil. Bahkan Puskesmas yang relatif baik (Sedau)
+masih mengalami gangguan internet 5 hari/bulan. Tidak ada satupun Puskesmas yang memiliki infrastruktur
+yang sepenuhnya resilient terhadap gangguan listrik dan jaringan.
+</div>
 
-      <h3>D1 — Tata Kelola Strategi: TO-BE</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>SK Tim RME</strong></td>
-            <td>Seluruh Puskesmas memiliki SK Tim RME yang diperbarui tahunan, mencakup minimal: Penanggung Jawab, Koordinator IT, Perekam Medis, dan perwakilan setiap unit layanan.</td>
-          </tr>
-          <tr>
-            <td><strong>SOP Alur Data</strong></td>
-            <td>SOP lengkap dan terdokumentasi untuk seluruh alur: Pendaftaran → Pemeriksaan → Penunjang (Lab/Radiologi) → Farmasi → Pelaporan → Rujukan. SOP mencakup alur data digital dan prosedur fallback manual.</td>
-          </tr>
-          <tr>
-            <td><strong>Penanggung Jawab Data</strong></td>
-            <td>Setiap Puskesmas memiliki minimal 1 Perekam Medis/Koder bersertifikat yang ditetapkan secara tertulis sebagai penanggung jawab data dan quality assurance.</td>
-          </tr>
-          <tr>
-            <td><strong>Perencanaan</strong></td>
-            <td>Digitalisasi masuk dalam RUK/RPK dengan indikator kinerja terukur (KPI): % keberhasilan kirim, uptime sistem, waktu respons gangguan, jumlah pelatihan/tahun.</td>
-          </tr>
-          <tr>
-            <td><strong>Hak Akses</strong></td>
-            <td>100% akun individual berbasis peran (role-based access). Tidak ada akun bersama. Setiap akses tercatat dalam audit trail. Password policy diterapkan (minimal 8 karakter, ganti per 90 hari).</td>
-          </tr>
-          <tr>
-            <td><strong>Pemantauan Rutin</strong></td>
-            <td>Audit data bulanan terstruktur: kelengkapan pengisian, keberhasilan kirim SATUSEHAT, akurasi ICD-10/9-CM, validitas NIK. Hasil audit ditindaklanjuti dalam rapat tim.</td>
-          </tr>
-          <tr>
-            <td><strong>Prosedur Gangguan</strong></td>
-            <td>SOP contingency tertulis dan disimulasikan minimal 1x/tahun. Mencakup: formulir darurat, input susulan dalam 24 jam, rekonsiliasi data, dan eskalasi ke Dinkes jika gangguan &gt;4 jam.</td>
-          </tr>
-        </tbody>
-      </table>
+<h3>D5 — Kesiapan SDM: AS-IS</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Aktual</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Tenaga IT/SIK</strong></td><td>Maleber: 3 orang khusus (1 magang hub, 1 PPPK PW, 1 BLUD). Sedau: 1 orang khusus. Panggang I: rangkap tugas. Cilebak: tidak ada. Narmada &amp; Bener: belum terdata.</td></tr>
+<tr><td><strong>Perekam Medis / Koder</strong></td><td>Maleber: 1 terlatih (PPPK PW). Panggang I: 1 terlatih. Cilebak: belum ada. Sedau: ada tapi belum terlatih. Narmada &amp; Bener: belum terdata.</td></tr>
+<tr><td><strong>Kemampuan Komputer</strong></td><td>Maleber &amp; Panggang I: &gt;80% lancar. Sedau: 50-80%. Cilebak: &lt;50% — hanya mampu operasi standar office.</td></tr>
+<tr><td><strong>Pelatihan RME/SATUSEHAT</strong></td><td>Maleber: 1x pelatihan. Panggang I: 1x. Sedau: IT ikut pelatihan Dinkes. Cilebak: belum ada pelatihan (catatan: perekam medis belum termasuk standarisasi 13 tenaga dasar). Narmada &amp; Bener: belum terdata.</td></tr>
+<tr><td><strong>Beban Kerja</strong></td><td>Cilebak, Maleber, Panggang I: cukup. Maleber mencatat 0 jam input ganda/hari. Narmada, Sedau, Bener: belum terdata.</td></tr>
+<tr><td><strong>Super-User</strong></td><td>Maleber: ada. Sedau: ada. Cilebak: tidak ada (password di-sharing, kecuali rekam medis). Panggang I: belum terdata.</td></tr>
+<tr><td><strong>Dukungan Teknis</strong></td><td>Maleber: vendor Medisy, respons &lt;5 menit. Panggang I: Dinkes + vendor Smarthealth, cepat. Cilebak: tanya vendor (respons 1 hari). Sedau: belum terdata.</td></tr>
+</tbody>
+</table>
+<div class="callout danger">
+<strong>Ringkasan As-Is D5:</strong><br>
+Kesenjangan SDM adalah risiko keberlanjutan terbesar. Cilebak tidak memiliki satu pun tenaga IT maupun Perekam Medis —
+seluruh operasional digital bergantung pada staf klinis yang kemampuan komputernya di bawah 50%.
+Di sisi lain, Maleber menunjukkan bahwa keberadaan tenaga khusus (3 IT + 1 RM terlatih) berkorelasi langsung
+dengan keberhasilan pengiriman data 100% dan respons teknis &lt;5 menit. Secara keseluruhan, pelatihan masih bersifat
+one-off dan belum ada program pengembangan kapasitas yang berkelanjutan.
+</div>
 
-      <h3>D2 — Pendanaan &amp; Investasi: TO-BE</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Sumber Dana</strong></td>
-            <td>Diversifikasi: BLUD (operasional) + BOK/JKN (pengembangan) + APBD (infrastruktur besar) + DAK (perangkat). Tidak bergantung pada satu sumber.</td>
-          </tr>
-          <tr>
-            <td><strong>Besaran Anggaran</strong></td>
-            <td>Minimal Rp 30-50 juta/tahun per Puskesmas untuk TIK (internet, pemeliharaan, lisensi, pelatihan, penggantian perangkat). Anggaran dipisahkan dalam mata anggaran khusus, tidak tercampur dengan operasional umum.</td>
-          </tr>
-          <tr>
-            <td><strong>Biaya Lisensi</strong></td>
-            <td>Lisensi SIMPUS/RME ditanggung oleh Dinkes Kabupaten melalui kontrak payung (framework agreement), bukan dibebankan per-Puskesmas.</td>
-          </tr>
-          <tr>
-            <td><strong>Rencana Pengadaan</strong></td>
-            <td>Roadmap pengadaan 3-5 tahun: siklus penggantian PC (5 tahun), UPS (3 tahun), jaringan (5 tahun). Pengadaan berbasis kebutuhan assessment, bukan ad-hoc.</td>
-          </tr>
-          <tr>
-            <td><strong>Dukungan Dinkes/NGO</strong></td>
-            <td>Dinkes Kabupaten menyediakan: helpdesk teknis, pelatihan terpusat, pendampingan implementasi, dan co-investment untuk infrastruktur.</td>
-          </tr>
-          <tr>
-            <td><strong>Kepastian Dana</strong></td>
-            <td>Tersedia dan terjamin minimal 3 tahun ke depan dalam dokumen perencanaan (RPD BOK, RBA BLUD, Renstra Dinkes).</td>
-          </tr>
-        </tbody>
-      </table>
+<h3>D6 — Kebijakan Daerah: AS-IS</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Aktual</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Kebijakan Daerah (Perbup/SK)</strong></td><td>Maleber: ada (Renstra sesuai Perkada). Panggang I: ada (SPBE, SE Dashboard Executive). Sedau: ada. Bener: tidak ada. Cilebak: tidak ada (catatan: saat FKPT memakai RME langsung eskalasi ke pusat). Narmada: belum terdata (ada catatan “Perbup Lombok Barat” tapi belum diisi).</td></tr>
+<tr><td><strong>Peran Dinkes</strong></td><td>Maleber, Panggang I, Sedau: Dinkes mengelola. Cilebak: Puskesmas mandiri (e-dinkes hanya di Infokes, Cilebak pakai e-Simkes sendiri). Bener &amp; Narmada: belum terdata.</td></tr>
+<tr><td><strong>Format Pelaporan Daerah</strong></td><td>Maleber: ada (Perbup Kuningan No. 20/2025). Panggang I: ada (SPM, Stunting, TB, Dopadu, SIPD). Bener: tidak ada. Cilebak: tidak ada (hanya standar Kemenkes). Narmada &amp; Sedau: belum terdata.</td></tr>
+<tr><td><strong>Kerjasama Vendor &amp; Kepemilikan Data</strong></td><td>Bener, Maleber, Panggang I, Sedau: ada. Cilebak: tidak ada. Narmada: belum terdata.</td></tr>
+<tr><td><strong>Perlindungan Data Pribadi</strong></td><td>Bener: ada (MoU vendor). Maleber: ada (SOP). Panggang I: ada. Cilebak: tidak ada (hanya NDA dengan vendor). Sedau: tidak ada. Narmada: belum terdata.</td></tr>
+<tr><td><strong>Insentif SDM RME</strong></td><td>Maleber: ada (SK Tim RME). Panggang I: ada. Narmada: ada catatan (SK Kadis Remunerasi BLUD). Bener: tidak. Cilebak: tidak. Sedau: tidak.</td></tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan As-Is D6:</strong><br>
+Dukungan kebijakan daerah sangat fragmented dan tidak merata. Dalam satu kabupaten (Kuningan), dua Puskesmas memiliki kondisi
+bertolak belakang: Maleber didukung Perbup dan Dinkes, sementara Cilebak dibiarkan mandiri tanpa payung hukum.
+Tidak ada satupun kabupaten yang memiliki regulasi komprehensif yang mencakup seluruh aspek: RME, perlindungan data,
+standar pelaporan, kepemilikan data, dan insentif SDM secara simultan. Ini menyebabkan setiap Puskesmas “meraba-raba” sendiri
+dalam implementasi digitalisasi.
+</div>
+</section>
 
-      <h3>D3 — Integrasi: TO-BE</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Aplikasi SIMPUS</strong></td>
-            <td>Satu standar aplikasi per kabupaten/kota (atau minimal satu platform terintegrasi) untuk memudahkan konsolidasi data dan dukungan teknis.</td>
-          </tr>
-          <tr>
-            <td><strong>Input Ganda</strong></td>
-            <td>Zero double entry. Seluruh aplikasi program vertikal (SITB, SIGA, SIHA, ASIK, dll) terintegrasi penuh melalui SATUSEHAT atau API SIMPUS. Petugas hanya input satu kali di SIMPUS.</td>
-          </tr>
-          <tr>
-            <td><strong>Integrasi SATUSEHAT</strong></td>
-            <td>100% modul SATUSEHAT terkirim: RME RJ, RI, IGD, ANC, INC, PNC, Neonatus, Imunisasi, Gizi, Tumbuh Kembang, PTM, TB, Kefarmasian, Lab, Rujukan, SHK, PKPR.</td>
-          </tr>
-          <tr>
-            <td><strong>Keberhasilan Kirim</strong></td>
-            <td>≥99% keberhasilan kirim SATUSEHAT. Kegagalan &lt;1% ditindaklanjuti dalam 24 jam.</td>
-          </tr>
-          <tr>
-            <td><strong>Bridging P-Care</strong></td>
-            <td>100% bridging penuh dengan P-Care BPJS: pendaftaran, pelayanan, diagnosa, tindakan, rujukan, dan klaim.</td>
-          </tr>
-          <tr>
-            <td><strong>Ekspor Data / API</strong></td>
-            <td>Seluruh aplikasi menyediakan API terbuka dan fitur ekspor data terstruktur (CSV/JSON/FHIR). Kamus data tersedia dan terdokumentasi.</td>
-          </tr>
-          <tr>
-            <td><strong>Kualitas Data</strong></td>
-            <td>NIK valid: 100% (integrasi Dukcapil real-time). ICD-10: 100%. ICD-9-CM: 100% (termasuk tindakan minor). KFA: 100%. LOINC: 100% (untuk lab).</td>
-          </tr>
-          <tr>
-            <td><strong>Master Data</strong></td>
-            <td>Seluruh master data (diagnosa, obat, tindakan) mengikuti standar nasional (ICD-10, ICD-9-CM, KFA, LOINC). Tidak ada kode lokal/custom. Data bisa diekspor dan diaudit.</td>
-          </tr>
-        </tbody>
-      </table>
+<section id="to-be" class="card">
+<h2>🎯 Analisis Kondisi TO-BE (Menyeluruh — 6 Puskesmas)</h2>
+<p class="section-note">
+To-Be menggambarkan kondisi ideal yang harus dicapai oleh seluruh Puskesmas berdasarkan standar regulasi
+(Permenkes 24/2022 tentang RME, Perpres 82/2023 tentang SATUSEHAT, Permenkes 43/2019 tentang Puskesmas,
+dan best practices transformasi digital kesehatan).
+</p>
 
-      <h3>D4 — Infrastruktur: TO-BE</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Listrik</strong></td>
-            <td>PLN dengan kapasitas memadai (minimal 10.000 VA) + UPS untuk seluruh perangkat kritis (server, PC pelayanan, jaringan) + Genset otomatis (auto-transfer switch). Pemadaman tidak boleh mengganggu pelayanan &gt;5 menit.</td>
-          </tr>
-          <tr>
-            <td><strong>Internet</strong></td>
-            <td>Dua jalur internet (primary fiber optic + backup seluler/VSAT). Bandwidth minimal 100 Mbps dedicated. SLA uptime ≥99,5%. Tidak ada Puskesmas yang bergantung solely pada seluler.</td>
-          </tr>
-          <tr>
-            <td><strong>Perangkat</strong></td>
-            <td>Rasio minimal 1 PC/laptop per ruang pelayanan. Seluruh perangkat terkoneksi LAN/WiFi Puskesmas. Usia perangkat &lt;5 tahun.</td>
-          </tr>
-          <tr>
-            <td><strong>Backup Data</strong></td>
-            <td>Backup otomatis harian (3-2-1 rule: 3 salinan, 2 media berbeda, 1 offsite/cloud). Uji pemulihan (restore test) minimal 1x per semester. Puskesmas memiliki salinan backup mandiri, tidak hanya di vendor.</td>
-          </tr>
-          <tr>
-            <td><strong>Layanan Luar Gedung</strong></td>
-            <td>Tablet/HP dengan aplikasi offline-capable + sinkronisasi saat online. Tersedia modem portabel/MiFi untuk daerah blank spot. Tidak ada lagi pencatatan kertas saat Posyandu/kunjungan rumah.</td>
-          </tr>
-          <tr>
-            <td><strong>Dukungan Teknis</strong></td>
-            <td>Respons gangguan &lt;30 menit (remote) atau &lt;4 jam (onsite). Tersedia SLA tertulis dengan vendor. Dinkes menyediakan helpdesk tier-1.</td>
-          </tr>
-        </tbody>
-      </table>
+<h3>D1 — Tata Kelola Strategi: TO-BE</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Ideal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>SK Tim RME</strong></td><td>Seluruh Puskesmas memiliki SK Tim RME yang diperbarui tahunan, mencakup minimal: Penanggung Jawab, Koordinator IT, Perekam Medis, dan perwakilan setiap unit layanan.</td></tr>
+<tr><td><strong>SOP Alur Data</strong></td><td>SOP lengkap dan terdokumentasi untuk seluruh alur: Pendaftaran → Pemeriksaan → Penunjang (Lab/Radiologi) → Farmasi → Pelaporan → Rujukan. SOP mencakup alur data digital dan prosedur fallback manual.</td></tr>
+<tr><td><strong>Penanggung Jawab Data</strong></td><td>Setiap Puskesmas memiliki minimal 1 Perekam Medis/Koder bersertifikat yang ditetapkan secara tertulis sebagai penanggung jawab data dan quality assurance.</td></tr>
+<tr><td><strong>Perencanaan</strong></td><td>Digitalisasi masuk dalam RUK/RPK dengan indikator kinerja terukur (KPI): % keberhasilan kirim, uptime sistem, waktu respons gangguan, jumlah pelatihan/tahun.</td></tr>
+<tr><td><strong>Hak Akses</strong></td><td>100% akun individual berbasis peran (role-based access). Tidak ada akun bersama. Setiap akses tercatat dalam audit trail. Password policy diterapkan (minimal 8 karakter, ganti per 90 hari).</td></tr>
+<tr><td><strong>Pemantauan Rutin</strong></td><td>Audit data bulanan terstruktur: kelengkapan pengisian, keberhasilan kirim SATUSEHAT, akurasi ICD-10/9-CM, validitas NIK. Hasil audit ditindaklanjuti dalam rapat tim.</td></tr>
+<tr><td><strong>Prosedur Gangguan</strong></td><td>SOP contingency tertulis dan disimulasikan minimal 1x/tahun. Mencakup: formulir darurat, input susulan dalam 24 jam, rekonsiliasi data, dan eskalasi ke Dinkes jika gangguan &gt;4 jam.</td></tr>
+</tbody>
+</table>
 
-      <h3>D5 — Kesiapan SDM: TO-BE</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Tenaga IT/SIK</strong></td>
-            <td>Minimal 2 tenaga IT/SIK khusus per Puskesmas (1 administrator sistem, 1 support). Tidak rangkap tugas klinis.</td>
-          </tr>
-          <tr>
-            <td><strong>Perekam Medis/Koder</strong></td>
-            <td>Minimal 1 Perekam Medis bersertifikat (D3/D4 RMIK) per Puskesmas, terlatih ICD-10, ICD-9-CM, dan koding klinis.</td>
-          </tr>
-          <tr>
-            <td><strong>Kemampuan Komputer</strong></td>
-            <td>≥90% staf lancar menggunakan komputer dasar dan aplikasi RME. Pelatihan onboarding wajib untuk semua staf baru.</td>
-          </tr>
-          <tr>
-            <td><strong>Pelatihan</strong></td>
-            <td>Minimal 2x pelatihan per tahun per staf: 1x teknis (SATUSEHAT, SIMPUS, coding) dan 1x penyegaran. Pelatihan terstruktur dengan kurikulum, pre-post test, dan sertifikasi.</td>
-          </tr>
-          <tr>
-            <td><strong>Beban Kerja</strong></td>
-            <td>Input data tidak melebihi 30 menit/hari per petugas. Zero double entry. Rasio komputer:pasien memadai (tidak ada antrian akibat keterbatasan perangkat).</td>
-          </tr>
-          <tr>
-            <td><strong>Super-User</strong></td>
-            <td>Minimal 1 super-user per unit layanan (pendaftaran, poli, farmasi, lab, UGD) yang mampu troubleshoot level-1 dan melatih rekan sejawat.</td>
-          </tr>
-          <tr>
-            <td><strong>Dukungan Teknis</strong></td>
-            <td>Helpdesk internal (super-user) → Helpdesk Dinkes (tier-2) → Vendor (tier-3). Respons: tier-1 &lt;15 menit, tier-2 &lt;1 jam, tier-3 &lt;4 jam.</td>
-          </tr>
-        </tbody>
-      </table>
+<h3>D2 — Pendanaan &amp; Investasi: TO-BE</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Ideal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Sumber Dana</strong></td><td>Diversifikasi: BLUD (operasional) + BOK/JKN (pengembangan) + APBD (infrastruktur besar) + DAK (perangkat). Tidak bergantung pada satu sumber.</td></tr>
+<tr><td><strong>Besaran Anggaran</strong></td><td>Minimal Rp 30-50 juta/tahun per Puskesmas untuk TIK (internet, pemeliharaan, lisensi, pelatihan, penggantian perangkat). Anggaran dipisahkan dalam mata anggaran khusus, tidak tercampur dengan operasional umum.</td></tr>
+<tr><td><strong>Biaya Lisensi</strong></td><td>Lisensi SIMPUS/RME ditanggung oleh Dinkes Kabupaten melalui kontrak payung (framework agreement), bukan dibebankan per-Puskesmas.</td></tr>
+<tr><td><strong>Rencana Pengadaan</strong></td><td>Roadmap pengadaan 3-5 tahun: siklus penggantian PC (5 tahun), UPS (3 tahun), jaringan (5 tahun). Pengadaan berbasis kebutuhan assessment, bukan ad-hoc.</td></tr>
+<tr><td><strong>Dukungan Dinkes/NGO</strong></td><td>Dinkes Kabupaten menyediakan: helpdesk teknis, pelatihan terpusat, pendampingan implementasi, dan co-investment untuk infrastruktur.</td></tr>
+<tr><td><strong>Kepastian Dana</strong></td><td>Tersedia dan terjamin minimal 3 tahun ke depan dalam dokumen perencanaan (RPD BOK, RBA BLUD, Renstra Dinkes).</td></tr>
+</tbody>
+</table>
 
-      <h3>D6 — Kebijakan Daerah: TO-BE</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 22%;">Aspek</th>
-            <th>Kondisi Ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Kebijakan Daerah</strong></td>
-            <td>Perbup/Perwali spesifik tentang RME/SIK Puskesmas yang mengatur: implementasi, standar, timeline, sanksi, dan evaluasi. Didukung SK Kepala Dinkes sebagai petunjuk teknis.</td>
-          </tr>
-          <tr>
-            <td><strong>Peran Dinkes</strong></td>
-            <td>Dinkes sebagai koordinator, pengawas, dan fasilitator: mengelola SIMPUS terpadu, menyediakan helpdesk, melakukan monitoring &amp; evaluasi triwulanan, dan melaporkan ke Kemenkes.</td>
-          </tr>
-          <tr>
-            <td><strong>Format Pelaporan</strong></td>
-            <td>Standar pelaporan daerah yang terintegrasi dengan SATUSEHAT. Tidak ada format manual tambahan. Satu pintu pelaporan.</td>
-          </tr>
-          <tr>
-            <td><strong>Kerjasama Vendor</strong></td>
-            <td>Kontrak payung (framework agreement) Dinkes-Vendor yang mengatur: SLA, kepemilikan data, eskalasi, penalty, dan exit strategy. Puskesmas tidak perlu negosiasi sendiri.</td>
-          </tr>
-          <tr>
-            <td><strong>Perlindungan Data</strong></td>
-            <td>SOP Perlindungan Data Pribadi Pasien di setiap Puskesmas, mengacu pada UU 27/2022 (PDP) dan Permenkes 24/2022. Mencakup: consent, enkripsi, retensi, hak akses, dan breach notification. MoU/NDA dengan vendor wajib.</td>
-          </tr>
-          <tr>
-            <td><strong>Insentif SDM</strong></td>
-            <td>Kebijakan insentif/remunerasi khusus untuk tenaga IT dan Perekam Medis yang mengelola RME. Minimal setara dengan insentif program lain (BOK/JKN). Penugasan jelas dalam SK.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+<h3>D3 — Integrasi: TO-BE</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Ideal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Aplikasi SIMPUS</strong></td><td>Satu standar aplikasi per kabupaten/kota (atau minimal satu platform terintegrasi) untuk memudahkan konsolidasi data dan dukungan teknis.</td></tr>
+<tr><td><strong>Input Ganda</strong></td><td>Zero double entry. Seluruh aplikasi program vertikal (SITB, SIGA, SIHA, ASIK, dll) terintegrasi penuh melalui SATUSEHAT atau API SIMPUS. Petugas hanya input satu kali di SIMPUS.</td></tr>
+<tr><td><strong>Integrasi SATUSEHAT</strong></td><td>100% modul SATUSEHAT terkirim: RME RJ, RI, IGD, ANC, INC, PNC, Neonatus, Imunisasi, Gizi, Tumbuh Kembang, PTM, TB, Kefarmasian, Lab, Rujukan, SHK, PKPR.</td></tr>
+<tr><td><strong>Keberhasilan Kirim</strong></td><td>≥99% keberhasilan kirim SATUSEHAT. Kegagalan &lt;1% ditindaklanjuti dalam 24 jam.</td></tr>
+<tr><td><strong>Bridging P-Care</strong></td><td>100% bridging penuh dengan P-Care BPJS: pendaftaran, pelayanan, diagnosa, tindakan, rujukan, dan klaim.</td></tr>
+<tr><td><strong>Ekspor Data / API</strong></td><td>Seluruh aplikasi menyediakan API terbuka dan fitur ekspor data terstruktur (CSV/JSON/FHIR). Kamus data tersedia dan terdokumentasi.</td></tr>
+<tr><td><strong>Kualitas Data</strong></td><td>NIK valid: 100% (integrasi Dukcapil real-time). ICD-10: 100%. ICD-9-CM: 100% (termasuk tindakan minor). KFA: 100%. LOINC: 100% (untuk lab).</td></tr>
+<tr><td><strong>Master Data</strong></td><td>Seluruh master data (diagnosa, obat, tindakan) mengikuti standar nasional (ICD-10, ICD-9-CM, KFA, LOINC). Tidak ada kode lokal/custom. Data bisa diekspor dan diaudit.</td></tr>
+</tbody>
+</table>
 
-    <section id="detil-puskesmas" class="card">
-      <h2>🏥 Detil per Puskesmas: AS-IS vs TO-BE</h2>
+<h3>D4 — Infrastruktur: TO-BE</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Ideal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Listrik</strong></td><td>PLN dengan kapasitas memadai (minimal 10.000 VA) + UPS untuk seluruh perangkat kritis (server, PC pelayanan, jaringan) + Genset otomatis (auto-transfer switch). Pemadaman tidak boleh mengganggu pelayanan &gt;5 menit.</td></tr>
+<tr><td><strong>Internet</strong></td><td>Dua jalur internet (primary fiber optic + backup seluler/VSAT). Bandwidth minimal 100 Mbps dedicated. SLA uptime ≥99,5%. Tidak ada Puskesmas yang bergantung solely pada seluler.</td></tr>
+<tr><td><strong>Perangkat</strong></td><td>Rasio minimal 1 PC/laptop per ruang pelayanan. Seluruh perangkat terkoneksi LAN/WiFi Puskesmas. Usia perangkat &lt;5 tahun.</td></tr>
+<tr><td><strong>Backup Data</strong></td><td>Backup otomatis harian (3-2-1 rule: 3 salinan, 2 media berbeda, 1 offsite/cloud). Uji pemulihan (restore test) minimal 1x per semester. Puskesmas memiliki salinan backup mandiri, tidak hanya di vendor.</td></tr>
+<tr><td><strong>Layanan Luar Gedung</strong></td><td>Tablet/HP dengan aplikasi offline-capable + sinkronisasi saat online. Tersedia modem portabel/MiFi untuk daerah blank spot. Tidak ada lagi pencatatan kertas saat Posyandu/kunjungan rumah.</td></tr>
+<tr><td><strong>Dukungan Teknis</strong></td><td>Respons gangguan &lt;30 menit (remote) atau &lt;4 jam (onsite). Tersedia SLA tertulis dengan vendor. Dinkes menyediakan helpdesk tier-1.</td></tr>
+</tbody>
+</table>
 
-      <div class="puskesmas-box">
-        <h3><span class="badge green">Best Practice</span>1. Puskesmas Maleber (Kuningan, Jawa Barat)</h3>
+<h3>D5 — Kesiapan SDM: TO-BE</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Ideal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Tenaga IT/SIK</strong></td><td>Minimal 2 tenaga IT/SIK khusus per Puskesmas (1 administrator sistem, 1 support). Tidak rangkap tugas klinis.</td></tr>
+<tr><td><strong>Perekam Medis/Koder</strong></td><td>Minimal 1 Perekam Medis bersertifikat (D3/D4 RMIK) per Puskesmas, terlatih ICD-10, ICD-9-CM, dan koding klinis.</td></tr>
+<tr><td><strong>Kemampuan Komputer</strong></td><td>≥90% staf lancar menggunakan komputer dasar dan aplikasi RME. Pelatihan onboarding wajib untuk semua staf baru.</td></tr>
+<tr><td><strong>Pelatihan</strong></td><td>Minimal 2x pelatihan per tahun per staf: 1x teknis (SATUSEHAT, SIMPUS, coding) dan 1x penyegaran. Pelatihan terstruktur dengan kurikulum, pre-post test, dan sertifikasi.</td></tr>
+<tr><td><strong>Beban Kerja</strong></td><td>Input data tidak melebihi 30 menit/hari per petugas. Zero double entry. Rasio komputer:pasien memadai (tidak ada antrian akibat keterbatasan perangkat).</td></tr>
+<tr><td><strong>Super-User</strong></td><td>Minimal 1 super-user per unit layanan (pendaftaran, poli, farmasi, lab, UGD) yang mampu troubleshoot level-1 dan melatih rekan sejawat.</td></tr>
+<tr><td><strong>Dukungan Teknis</strong></td><td>Helpdesk internal (super-user) → Helpdesk Dinkes (tier-2) → Vendor (tier-3). Respons: tier-1 &lt;15 menit, tier-2 &lt;1 jam, tier-3 &lt;4 jam.</td></tr>
+</tbody>
+</table>
 
-        <h4>AS-IS — Kondisi Saat Ini</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Kondisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>✅ SK Tim RME ada (No. 800/67/PKM-MLB/2026). SOP lengkap (5 dokumen). Penanggung jawab tertulis (Titi Nurbaeti, S.Kep.Ners). Hak akses individual berbasis peran (6 screenshot bukti). Pemantauan rutin. SOP gangguan tertulis. Digitalisasi masuk RPD BOK 2026.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>⚠️ Anggaran IT hanya Rp 1.600.000/tahun (Medisy Rp 800rb + Internet Rp 800rb). Sumber: BLUD + BOK. Lisensi ditanggung Puskesmas. Rencana pengadaan PC/Laptop dari SILPA. Dukungan Dinkes ada. Dana 2 tahun pasti (BOK/BLUD).</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>✅ Aplikasi: Medisy (PT Madtive Studio). Input ganda: 1 (CKG via GForm karena Medisy belum bisa tarik BNBA). SATUSEHAT: 3 modul terkirim (RME RJ, Farmasi, Lab). Kirim: 100% berhasil. P-Care: Penuh. API tersedia. Kualitas data: 100% semua. Master data: bisa diekspor, standar.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>✅ Listrik: PLN 16.000 VA, padam 1x/bulan, Genset. Internet: SIMPATI 200 Mbps (4 HP). Backup: otomatis harian, pernah diuji restore. Luar gedung: 5 perangkat di Pustu. Dukungan teknis: &lt;5 menit (vendor Medisy lokal).</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>✅ IT: 3 orang khusus (1 magang hub, 1 PPPK PW, 1 BLUD). RM: 1 terlatih. Komputer: &gt;80% lancar. Pelatihan: 1x. Beban: cukup, 0 jam input ganda. Super-user: ada. Dukungan: Medisy &lt;5 menit.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>✅ Kebijakan: Renstra sesuai Perkada. Dinkes mengelola. Format pelaporan: Perbup Kuningan No. 20/2025. MoU vendor: ada (MOU Medisy). Perlindungan data: ada (SOP). Insentif SDM: ada (SK Tim RME).</td>
-            </tr>
-          </tbody>
-        </table>
+<h3>D6 — Kebijakan Daerah: TO-BE</h3>
+<table>
+<thead>
+<tr><th style="width:22%">Aspek</th><th>Kondisi Ideal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Kebijakan Daerah</strong></td><td>Perbup/Perwali spesifik tentang RME/SIK Puskesmas yang mengatur: implementasi, standar, timeline, sanksi, dan evaluasi. Didukung SK Kepala Dinkes sebagai petunjuk teknis.</td></tr>
+<tr><td><strong>Peran Dinkes</strong></td><td>Dinkes sebagai koordinator, pengawas, dan fasilitator: mengelola SIMPUS terpadu, menyediakan helpdesk, melakukan monitoring &amp; evaluasi triwulanan, dan melaporkan ke Kemenkes.</td></tr>
+<tr><td><strong>Format Pelaporan</strong></td><td>Standar pelaporan daerah yang terintegrasi dengan SATUSEHAT. Tidak ada format manual tambahan. Satu pintu pelaporan.</td></tr>
+<tr><td><strong>Kerjasama Vendor</strong></td><td>Kontrak payung (framework agreement) Dinkes-Vendor yang mengatur: SLA, kepemilikan data, eskalasi, penalty, dan exit strategy. Puskesmas tidak perlu negosiasi sendiri.</td></tr>
+<tr><td><strong>Perlindungan Data</strong></td><td>SOP Perlindungan Data Pribadi Pasien di setiap Puskesmas, mengacu pada UU 27/2022 (PDP) dan Permenkes 24/2022. Mencakup: consent, enkripsi, retensi, hak akses, dan breach notification. MoU/NDA dengan vendor wajib.</td></tr>
+<tr><td><strong>Insentif SDM</strong></td><td>Kebijakan insentif/remunerasi khusus untuk tenaga IT dan Perekam Medis yang mengelola RME. Minimal setara dengan insentif program lain (BOK/JKN). Penugasan jelas dalam SK.</td></tr>
+</tbody>
+</table>
+</section>
 
-        <h4>TO-BE — Yang Harus Dicapai</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Target</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>Pertahankan kelengkapan. Tambahkan: audit trail review bulanan, simulasi contingency 1x/tahun, KPI terukur dalam RUK.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>Tingkatkan anggaran IT ke minimal Rp 30 juta/tahun. Advokasi Dinkes untuk subsidi lisensi. Masukkan rencana upgrade hardware dalam roadmap 3 tahun.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>Tambah modul SATUSEHAT (saat ini baru 3 dari 18+ modul). Hilangkan input ganda CKG (integrasi BNBA ke Medisy). Target: semua modul terkirim, zero GForm.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>Tambah UPS untuk seluruh PC pelayanan (saat ini hanya Genset). Tambah 1 jalur internet backup (fiber).</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>Pertahankan 3 IT + 1 RM. Tambah pelatihan coding ICD-9-CM untuk RM. Kembangkan super-user di setiap unit (saat ini belum rinci per unit).</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>Pertahankan. Jadikan model/role model untuk Puskesmas lain di Kuningan. Dokumentasikan best practice untuk direplikasi.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<section id="gap-analisis" class="card">
+<h2>🏥 GAP Analisis per Puskesmas</h2>
+<p class="section-note">
+Bagian ini membandingkan kondisi faktual setiap Puskesmas (<strong>As-Is</strong>) dengan kondisi ideal yang harus dicapai (<strong>To-Be</strong>),
+kemudian mengidentifikasi <strong>Gap Analysis</strong> sebagai dasar prioritas intervensi. As-Is dan To-Be mengacu pada Analisis Menyeluruh
+di bagian sebelumnya, sehingga terdapat benang merah yang konsisten antar-bagian.
+</p>
 
-      <div class="puskesmas-box">
-        <h3><span class="badge yellow">Menengah</span>2. Puskesmas Narmada (Lombok Barat, NTB)</h3>
+<div class="puskesmas-box">
+<h3><span class="badge green">Best Practice</span>1. Puskesmas Maleber (Kuningan, Jawa Barat)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:12%">Dimensi</th>
+<th style="width:29%">Kondisi As-Is</th>
+<th style="width:29%">Kondisi To-Be</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1 — Tata Kelola Strategi</strong></td>
+<td>
+• SK Tim RME ada (No. 800/67/PKM-MLB/2026)<br>
+• SOP alur data lengkap (5 dokumen)<br>
+• Penanggung jawab tertulis: Titi Nurbaeti, S.Kep.Ners<br>
+• Hak akses individual berbasis peran (6 bukti screenshot)<br>
+• Pemantauan rutin &amp; SOP gangguan tertulis
+</td>
+<td>
+• SK diperbarui tahunan<br>
+• SOP mencakup fallback manual &amp; disimulasikan 1x/tahun<br>
+• Penanggung jawab adalah Perekam Medis bersertifikat<br>
+• Audit trail review bulanan<br>
+• KPI terukur dalam RUK (uptime, % kirim, waktu respons)
+</td>
+<td>
+✅ <strong>Gap Kecil (Enhancement).</strong><br><br>
+Fondasi tata kelola sudah sangat baik. Yang dibutuhkan bukan pembangunan dari nol, melainkan penguatan:
+tambahkan KPI terukur, simulasi contingency tahunan, dan review audit trail bulanan agar tata kelola bersifat
+<em>proactive</em>, bukan hanya <em>reactive</em>.
+</td>
+</tr>
+<tr>
+<td><strong>D2 — Pendanaan &amp; Investasi</strong></td>
+<td>
+• Anggaran IT hanya <strong>Rp 1,6 juta/tahun</strong> (Medisy Rp 800rb + Internet Rp 800rb)<br>
+• Sumber: BLUD + BOK<br>
+• Lisensi ditanggung Puskesmas<br>
+• Rencana pengadaan PC/Laptop dari SILPA<br>
+• Dukungan Dinkes ada
+</td>
+<td>
+• Minimal <strong>Rp 30-50 juta/tahun</strong> untuk TIK<br>
+• Lisensi ditanggung Dinkes via kontrak payung<br>
+• Roadmap pengadaan 3-5 tahun<br>
+• Dukungan co-investment Dinkes
+</td>
+<td>
+⚠️ <strong>Gap Signifikan (Anggaran).</strong><br><br>
+Kesenjangan utama ada di besaran anggaran: Rp 1,6 jt vs ideal Rp 30-50 jt. Meski tata kelola baik, tanpa anggaran memadai,
+peningkatan kapasitas (upgrade hardware, pelatihan, keamanan) akan terhambat. Advokasi Dinkes untuk subsidi lisensi
+dan alokasi anggaran minimum sangat dibutuhkan.
+</td>
+</tr>
+<tr>
+<td><strong>D3 — Integrasi</strong></td>
+<td>
+• Aplikasi: Medisy (PT Madtive Studio)<br>
+• Input ganda: <strong>1</strong> (CKG via GForm karena Medisy belum bisa tarik BNBA)<br>
+• SATUSEHAT: <strong>3 modul</strong> (RME RJ, Farmasi, Lab) berdasarkan isian rincian (status jawaban kosong)<br>
+• Keberhasilan kirim: <strong>100%</strong><br>
+• P-Care: Penuh<br>
+• Kualitas data: 100% semua
+</td>
+<td>
+• Seluruh modul SATUSEHAT terkirim (19+ modul)<br>
+• Zero double entry<br>
+• Integrasi BNBA langsung di Medisy<br>
+• 100% kualitas data dipertahankan
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Modul &amp; Input Ganda).</strong><br><br>
+Keberhasilan kirim 100% adalah kekuatan. Gap ada di jumlah modul SATUSEHAT (3 dari 19+) dan masih adanya input ganda CKG via GForm.
+Target: integrasi BNBA ke Medisy dan penambahan modul SATUSEHAT secara bertahap.
+</td>
+</tr>
+<tr>
+<td><strong>D4 — Infrastruktur</strong></td>
+<td>
+• Listrik: PLN 16.000 VA, padam 1x/bulan, Genset<br>
+• Internet: SIMPATI 200 Mbps (4 HP)<br>
+• Backup: <strong>Otomatis harian</strong>, pernah uji restore (terbaik)<br>
+• Luar gedung: 5 perangkat di Pustu<br>
+• Dukungan teknis: <strong>&lt;5 menit</strong> (vendor lokal)
+</td>
+<td>
+• UPS untuk seluruh perangkat kritis<br>
+• Dua jalur internet (primary + backup)<br>
+• Backup otomatis harian + uji restore per semester (sudah tercapai)<br>
+• Respons gangguan &lt;30 menit (sudah tercapai)
+</td>
+<td>
+✅ <strong>Gap Kecil (Infrastruktur).</strong><br><br>
+Infrastruktur sudah paling matang di antara 6 Puskesmas. Gap minor: tambahkan UPS untuk seluruh PC pelayanan
+(saati ini hanya Genset) dan sediakan 1 jalur internet backup untuk redundansi.
+</td>
+</tr>
+<tr>
+<td><strong>D5 — Kesiapan SDM</strong></td>
+<td>
+• IT: <strong>3 orang khusus</strong> (1 magang hub, 1 PPPK PW, 1 BLUD)<br>
+• RM: 1 terlatih (PPPK PW)<br>
+• Komputer: <strong>&gt;80% lancar</strong><br>
+• Pelatihan: 1x<br>
+• Super-user: ada<br>
+• Dukungan: Medisy &lt;5 menit
+</td>
+<td>
+• Minimal 2 IT + 1 RM bersertifikat (sudah tercapai)<br>
+• Pelatihan 2x/tahun (teknis + penyegaran)<br>
+• Super-user di setiap unit layanan<br>
+• Pelatihan ICD-9-CM untuk RM
+</td>
+<td>
+✅ <strong>Gap Kecil (Pengembangan SDM).</strong><br><br>
+SDM sudah paling kuat. Gap: tingkatkan frekuensi pelatihan (1x → 2x/tahun), tambah pelatihan coding ICD-9-CM untuk RM,
+dan kembangkan super-user di setiap unit layanan (bukan hanya secara umum).
+</td>
+</tr>
+<tr>
+<td><strong>D6 — Kebijakan Daerah</strong></td>
+<td>
+• Kebijakan: Renstra sesuai Perkada<br>
+• Dinkes mengelola<br>
+• Format pelaporan: Perbup Kuningan No. 20/2025<br>
+• MoU vendor: ada<br>
+• Perlindungan data: ada (SOP)<br>
+• Insentif SDM: ada (SK Tim RME)
+</td>
+<td>
+• Seluruh aspek kebijakan lengkap (sudah tercapai)<br>
+• Jadikan role model untuk Puskesmas lain
+</td>
+<td>
+✅ <strong>Gap Minimal (Role Model).</strong><br><br>
+Maleber adalah satu-satunya Puskesmas yang memenuhi hampir seluruh aspek kebijakan daerah.
+Gap: dokumentasikan best practice untuk direplikasi ke Puskesmas lain di Kuningan (khususnya Cilebak).
+</td>
+</tr>
+</tbody>
+</table>
+<div class="callout success">
+<strong>Ringkasan Gap Maleber:</strong><br>
+Maleber adalah <strong>benchmark</strong> untuk 5 Puskesmas lainnya. Gap utama hanya pada <strong>besaran anggaran IT</strong>
+yang sangat minim (Rp 1,6 jt) dan <strong>jumlah modul SATUSEHAT</strong> yang baru 3. Aspek lain sudah mendekati atau mencapai kondisi ideal.
+Prioritas: advokasi anggaran dan ekspansi modul SATUSEHAT.
+</div>
+</div>
 
-        <h4>AS-IS — Kondisi Saat Ini</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Kondisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>✅ SK Tim RME ada (No. 51/A.1/SK/UPT.PKM.NMD/X/2024). SOP lengkap. Penanggung jawab tertulis (Wiratman Budi Saputra). Hak akses individual (Daftar Akun). Pemantauan rutin (Laporan Kinerja). SOP gangguan ada.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>⚠️ Sumber: BLUD + BOK. Anggaran IT belum diisi/tidak terdata. Lisensi ditanggung Puskesmas. Rencana pengadaan: ada. Dukungan Dinkes: ada. Dana 2 tahun: pasti.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>✅ Aplikasi: E-Puskesmas NG (Infokes). Input ganda: 1 (SSI). SATUSEHAT: Terintegrasi. Kirim: 98% (kendala: NIK tidak valid). P-Care: Sebagian (beberapa input belum bridging). Ekspor/API: Tidak ada. Kualitas data: NIK 98%, ICD-10 100%. Master data: hanya bisa dilihat, campuran standar &amp; lokal. ILP/CKG: aplikasi program terpisah.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>⚠️ Listrik: PLN 71.000 VA, padam 1x, UPS + Genset. Internet: MyRepublic 100 Mbps (gangguan 0-3 hari/bulan). Backup: Belum ada mandiri (di vendor). Luar gedung: Laptop. Dukungan teknis: belum terdata.</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>⚠️ IT: belum terdata. RM: belum terdata. Komputer: belum terdata. Pelatihan: belum terdata. Beban: belum terdata. Super-user: belum terdata. Dukungan: belum terdata.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>⚠️ Kebijakan: belum terdata (ada catatan “Perbup Lombok Barat”). Dinkes: belum terdata. Format pelaporan: belum terdata. Kerjasama vendor: belum terdata. Perlindungan data: belum terdata. Insentif: ada catatan (SK Kadis Remunerasi BLUD) tapi belum dikonfirmasi.</td>
-            </tr>
-          </tbody>
-        </table>
+<div class="puskesmas-box">
+<h3><span class="badge yellow">Menengah</span>2. Puskesmas Narmada (Lombok Barat, NTB)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:12%">Dimensi</th>
+<th style="width:29%">Kondisi As-Is</th>
+<th style="width:29%">Kondisi To-Be</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1 — Tata Kelola Strategi</strong></td>
+<td>
+• SK Tim RME ada (No. 51/A.1/SK/UPT.PKM.NMD/X/2024)<br>
+• SOP lengkap<br>
+• Penanggung jawab tertulis: Wiratman Budi Saputra<br>
+• Hak akses individual (Daftar Akun)<br>
+• Pemantauan rutin (Laporan Kinerja)<br>
+• SOP gangguan ada
+</td>
+<td>
+• SK diperbarui tahunan<br>
+• KPI terukur dalam RUK<br>
+• Audit data bulanan terstruktur<br>
+• Simulasi contingency 1x/tahun
+</td>
+<td>
+✅ <strong>Gap Kecil.</strong><br><br>
+Fondasi tata kelola sudah baik dan terdokumentasi. Gap: tambahkan KPI terukur dan formalisasi audit bulanan
+agar pemantauan lebih terstruktur.
+</td>
+</tr>
+<tr>
+<td><strong>D2 — Pendanaan &amp; Investasi</strong></td>
+<td>
+• Sumber: BLUD + BOK<br>
+• <strong>Anggaran IT: BELUM TERDATA</strong><br>
+• Lisensi ditanggung Puskesmas<br>
+• Rencana pengadaan: ada<br>
+• Dukungan Dinkes: ada<br>
+• Dana 2 tahun: pasti
+</td>
+<td>
+• Minimal Rp 30-50 juta/tahun<br>
+• Anggaran IT terdokumentasi eksplisit<br>
+• Lisensi ditanggung Dinkes
+</td>
+<td>
+🔴 <strong>Gap Kritis (Data Anggaran).</strong><br><br>
+Anggaran IT belum terdata — ini mengindikasikan tidak adanya perencanaan keuangan IT yang terstruktur.
+Prioritas utama: <strong>wajib mendata dan melaporkan anggaran IT</strong>, lalu alokasikan minimal Rp 30 juta/tahun.
+</td>
+</tr>
+<tr>
+<td><strong>D3 — Integrasi</strong></td>
+<td>
+• Aplikasi: E-Puskesmas NG (Infokes)<br>
+• Input ganda: <strong>1</strong> (SSI)<br>
+• SATUSEHAT: Terintegrasi (tanpa rincian modul)<br>
+• Keberhasilan kirim: <strong>98%</strong> (kendala: NIK tidak valid)<br>
+• P-Care: <strong>Sebagian</strong> (beberapa input belum bridging)<br>
+• Ekspor/API: <strong>Tidak ada</strong><br>
+• Master data: campuran standar &amp; lokal
+</td>
+<td>
+• Seluruh modul SATUSEHAT terkirim<br>
+• P-Care bridging penuh<br>
+• API terbuka + ekspor data<br>
+• 100% NIK valid (integrasi Dukcapil)<br>
+• Master data standar nasional
+</td>
+<td>
+⚠️ <strong>Gap Menengah-Besar (Interoperabilitas).</strong><br><br>
+Tiga gap utama: (1) P-Care baru sebagian → harus penuh; (2) Tidak ada API/ekspor → harus tersedia untuk interoperabilitas;
+(3) NIK 98% → validasi Dukcapil. Master data campuran perlu distandarkan.
+</td>
+</tr>
+<tr>
+<td><strong>D4 — Infrastruktur</strong></td>
+<td>
+• Listrik: PLN 71.000 VA, padam 1x, UPS + Genset<br>
+• Internet: MyRepublic 100 Mbps (gangguan 0-3 hari/bulan)<br>
+• Backup: <strong>Belum ada mandiri</strong> (di vendor)<br>
+• Luar gedung: Laptop<br>
+• Dukungan teknis: belum terdata
+</td>
+<td>
+• Backup mandiri (tidak hanya di vendor)<br>
+• Uji restore per semester<br>
+• UPS untuk seluruh perangkat<br>
+• Respons gangguan terukur
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Backup).</strong><br><br>
+Listrik dan internet relatif baik. Gap kritis: <strong>backup data belum mandiri</strong> (sepenuhnya di vendor).
+Ini risiko besar jika vendor bermasalah. Prioritas: buat backup mandiri + uji restore.
+</td>
+</tr>
+<tr>
+<td><strong>D5 — Kesiapan SDM</strong></td>
+<td>
+• IT: <strong>belum terdata</strong><br>
+• RM: <strong>belum terdata</strong><br>
+• Komputer: <strong>belum terdata</strong><br>
+• Pelatihan: <strong>belum terdata</strong><br>
+• Beban: <strong>belum terdata</strong><br>
+• Super-user: <strong>belum terdata</strong>
+</td>
+<td>
+• Minimal 1 IT + 1 RM terlatih<br>
+• ≥90% staf lancar komputer<br>
+• Pelatihan 2x/tahun<br>
+• Super-user per unit
+</td>
+<td>
+🔴 <strong>Gap Kritis (Data SDM).</strong><br><br>
+Seluruh item SDM belum terdata — ini blank spot terbesar. Prioritas: <strong>segera lengkapi data SDM</strong>,
+pastikan ada minimal 1 IT + 1 RM terlatih, dan adakan pelatihan coding.
+</td>
+</tr>
+<tr>
+<td><strong>D6 — Kebijakan Daerah</strong></td>
+<td>
+• Kebijakan: belum terdata (catatan: “Perbup Lombok Barat”)<br>
+• Dinkes: belum terdata<br>
+• Format pelaporan: belum terdata<br>
+• Kerjasama vendor: belum terdata<br>
+• Perlindungan data: belum terdata<br>
+• Insentif: ada catatan (SK Kadis Remunerasi BLUD)
+</td>
+<td>
+• Kebijakan daerah terdokumentasi<br>
+• SOP perlindungan data pasien<br>
+• Insentif SDM terkonfirmasi
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Verifikasi).</strong><br><br>
+Sebagian besar item belum terdata, meski ada indikasi Perbup dan SK Remunerasi.
+Prioritas: <strong>konfirmasi dan dokumentasikan</strong> kebijakan yang ada, serta pastikan SOP perlindungan data tersedia.
+</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan Gap Narmada:</strong><br>
+Narmada memiliki fondasi tata kelola dan integrasi yang baik, namun <strong>blank spot data</strong> pada D2 (anggaran), D5 (SDM),
+dan D6 (kebijakan) menjadi penghambat utama. Gap teknis ada di <strong>P-Care yang baru sebagian, ketiadaan API, dan backup yang belum mandiri</strong>.
+Prioritas: lengkapi data, selesaikan bridging P-Care, dan buat backup mandiri.
+</div>
+</div>
 
-        <h4>TO-BE — Yang Harus Dicapai</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Target</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>Pertahankan. Tambahkan KPI terukur.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>Wajib mendata dan melaporkan anggaran IT. Alokasikan minimal Rp 30 juta/tahun.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>Selesaikan bridging P-Care (dari sebagian → penuh). Tambahkan fitur ekspor/API pada aplikasi. Validasi NIK dengan Dukcapil (98% → 100%). Standarisasi master data (hilangkan kode lokal). Integrasikan ILP/CKG ke SIMPUS.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>Buat backup mandiri (tidak hanya di vendor). Tambah UPS untuk seluruh perangkat.</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>Segera lengkapi data SDM. Pastikan ada minimal 1 IT + 1 RM terlatih. Adakan pelatihan coding.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>Konfirmasi dan dokumentasikan Perbup Lombok Barat. Pastikan SOP perlindungan data tersedia.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<div class="puskesmas-box">
+<h3><span class="badge yellow">Menengah</span>3. Puskesmas Panggang I (Gunung Kidul, DIY)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:12%">Dimensi</th>
+<th style="width:29%">Kondisi As-Is</th>
+<th style="width:29%">Kondisi To-Be</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1 — Tata Kelola Strategi</strong></td>
+<td>
+• SK Tim RME ada<br>
+• SOP lengkap<br>
+• Penanggung jawab tertulis<br>
+• Hak akses individual<br>
+• Pemantauan rutin<br>
+• SOP gangguan ada
+</td>
+<td>
+• KPI terukur dalam RUK<br>
+• Simulasi contingency 1x/tahun
+</td>
+<td>
+✅ <strong>Gap Kecil.</strong><br><br>
+Tata kelola sudah baik. Gap: tambahkan KPI terukur dan simulasi contingency.
+</td>
+</tr>
+<tr>
+<td><strong>D2 — Pendanaan &amp; Investasi</strong></td>
+<td>
+• Sumber: BLUD + BOK<br>
+• Anggaran: <strong>Rp 9,96 juta/tahun</strong><br>
+• Lisensi ditanggung Puskesmas<br>
+• Rencana pengadaan: ada<br>
+• <strong>Dukungan Dinkes/NGO: Tidak ada</strong><br>
+• Dana 2 tahun: pasti
+</td>
+<td>
+• Minimal Rp 30-50 juta/tahun<br>
+• Dukungan Dinkes (helpdesk, pelatihan, co-investment)
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Dukungan Dinkes).</strong><br><br>
+Anggaran Rp 9,96 jt masih di bawah ideal. Gap utama: <strong>tidak ada dukungan Dinkes/NGO</strong>.
+Prioritas: advokasi Dinkes untuk dukungan teknis dan finansial.
+</td>
+</tr>
+<tr>
+<td><strong>D3 — Integrasi</strong></td>
+<td>
+• Aplikasi: SMARTHEALTH (PT Sisfomedika), <strong>Server Dinkes</strong><br>
+• Input ganda: <strong>5 aplikasi</strong> (Keswa, SIGA, SITB, SIHA, SIMONA) — <strong>tertinggi</strong><br>
+• SATUSEHAT: Terintegrasi<br>
+• Keberhasilan kirim: <strong>65,74%</strong> (penyebab: “tidak pernah dieksplor”)<br>
+• P-Care: Penuh<br>
+• Ekspor + API: ada<br>
+• Master data: bisa diekspor
+</td>
+<td>
+• Zero double entry<br>
+• Keberhasilan kirim ≥99%<br>
+• Seluruh modul SATUSEHAT dieksplorasi dan terkirim
+</td>
+<td>
+🔴 <strong>Gap Kritis (Keberhasilan Kirim &amp; Input Ganda).</strong><br><br>
+Dua gap terbesar: (1) Keberhasilan kirim hanya <strong>65,74%</strong> karena modul tidak dieksplorasi — ini murni masalah kapasitas/pengetahuan,
+bukan infrastruktur; (2) Input ganda <strong>5 aplikasi</strong> — tertinggi di antara 6 Puskesmas.
+Prioritas: pelatihan SATUSEHAT intensif dan integrasi aplikasi vertikal.
+</td>
+</tr>
+<tr>
+<td><strong>D4 — Infrastruktur</strong></td>
+<td>
+• Listrik: UPS + Genset (kapasitas tidak dirinci)<br>
+• Internet: <strong>Seluler</strong> (tidak ada fixed broadband)<br>
+• Backup: <strong>Manual berkala</strong> (belum uji restore)<br>
+• Luar gedung: Tablet/HP/Laptop/<strong>Kertas</strong><br>
+• Dukungan teknis: 10 menit (Dinkes + vendor)
+</td>
+<td>
+• Internet fixed broadband/fiber<br>
+• Backup otomatis harian + uji restore<br>
+• Tidak ada pencatatan kertas di luar gedung
+</td>
+<td>
+⚠️ <strong>Gap Menengah-Besar (Internet &amp; Backup).</strong><br><br>
+Gap utama: (1) Internet hanya <strong>seluler</strong> → tidak stabil untuk RME; (2) Backup masih <strong>manual</strong> → risiko kehilangan data.
+Prioritas: pasang fixed broadband dan otomatisasi backup.
+</td>
+</tr>
+<tr>
+<td><strong>D5 — Kesiapan SDM</strong></td>
+<td>
+• IT: <strong>Rangkap tugas</strong> (tidak ada tenaga khusus)<br>
+• RM: 1 terlatih<br>
+• Komputer: &gt;80% lancar<br>
+• Pelatihan: 1x<br>
+• Super-user: belum terdata
+</td>
+<td>
+• Minimal 2 IT khusus (tidak rangkap)<br>
+• Super-user per unit<br>
+• Pelatihan 2x/tahun
+</td>
+<td>
+⚠️ <strong>Gap Menengah (IT Rangkap).</strong><br><br>
+RM sudah terlatih dan kemampuan komputer baik. Gap: <strong>tidak ada tenaga IT khusus</strong> (rangkap tugas).
+Prioritas: angkat tenaga IT dedicated agar tidak terbebani tugas klinis.
+</td>
+</tr>
+<tr>
+<td><strong>D6 — Kebijakan Daerah</strong></td>
+<td>
+• Kebijakan: SPBE, SE Dashboard Executive<br>
+• Dinkes mengelola<br>
+• Format pelaporan: SPM, Stunting, TB, Dopadu, SIPD<br>
+• Kerjasama vendor: ada<br>
+• Perlindungan data: ada<br>
+• Insentif: ada
+</td>
+<td>
+• Seluruh aspek kebijakan lengkap (sudah tercapai)
+</td>
+<td>
+✅ <strong>Gap Minimal.</strong><br><br>
+Kebijakan daerah sudah komprehensif. Tidak ada gap signifikan.
+</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan Gap Panggang I:</strong><br>
+Panggang I memiliki kebijakan daerah yang kuat, tetapi <strong>keberhasilan kirim SATUSEHAT hanya 65,74%</strong>
+(karena tidak dieksplorasi) dan <strong>input ganda 5 aplikasi</strong> menjadi masalah terbesar.
+Infrastruktur internet yang hanya mengandalkan <strong>seluler</strong> juga rentan.
+Prioritas: pelatihan SATUSEHAT, integrasi aplikasi vertikal, dan upgrade internet ke fixed broadband.
+</div>
+</div>
 
-      <div class="puskesmas-box">
-        <h3><span class="badge yellow">Menengah</span>3. Puskesmas Panggang I (Gunung Kidul, DIY)</h3>
+<div class="puskesmas-box">
+<h3><span class="badge yellow">Menengah</span>4. Puskesmas Sedau (Lombok Barat, NTB)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:12%">Dimensi</th>
+<th style="width:29%">Kondisi As-Is</th>
+<th style="width:29%">Kondisi To-Be</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1 — Tata Kelola Strategi</strong></td>
+<td>
+• SK Tim RME ada (No. 05.5/SK/PKM.Sdu/I/2025)<br>
+• SOP lengkap<br>
+• Penanggung jawab tertulis: Rizki Wahyudi, S.Kom<br>
+• Hak akses individual<br>
+• Pemantauan rutin<br>
+• SOP gangguan ada
+</td>
+<td>
+• KPI terukur dalam RUK<br>
+• Simulasi contingency 1x/tahun
+</td>
+<td>
+✅ <strong>Gap Kecil.</strong><br><br>
+Tata kelola sudah baik. Gap: tambahkan KPI terukur.
+</td>
+</tr>
+<tr>
+<td><strong>D2 — Pendanaan &amp; Investasi</strong></td>
+<td>
+• Sumber: BLUD<br>
+• Anggaran: <strong>Rp 21 juta/tahun</strong> (tertinggi di antara 6)<br>
+• Lisensi ditanggung Puskesmas<br>
+• Rencana pengadaan: BOP<br>
+• Dukungan: ada (tapi <strong>belum ada bukti</strong>)<br>
+• Dana 2 tahun: pasti
+</td>
+<td>
+• Minimal Rp 30-50 juta/tahun<br>
+• Dukungan Dinkes terdokumentasi
+</td>
+<td>
+✅ <strong>Gap Kecil.</strong><br><br>
+Anggaran sudah tertinggi. Gap: dokumentasikan bukti dukungan Dinkes yang sudah ada.
+</td>
+</tr>
+<tr>
+<td><strong>D3 — Integrasi</strong></td>
+<td>
+• Aplikasi: Epuskesmas V3 NextGen (Infokes)<br>
+• Input ganda: <strong>4 aplikasi</strong> (ASIK, SITB, BPJS, Sisrute, Klinisia)<br>
+• SATUSEHAT: Terintegrasi, <strong>19 modul terkirim</strong> (terlengkap)<br>
+• Keberhasilan kirim: <strong>98-100%</strong><br>
+• P-Care: Penuh<br>
+• Ekspor: ada<br>
+• Master data: bisa diekspor<br>
+• NIK: 95%
+</td>
+<td>
+• Zero double entry<br>
+• 100% NIK valid<br>
+• Seluruh modul terkirim (sudah tercapai)
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Input Ganda &amp; NIK).</strong><br><br>
+Kekuatan: 19 modul terkirim (terlengkap) dan keberhasilan kirim tinggi.
+Gap: (1) Input ganda 4 aplikasi; (2) NIK baru 95% → perlu validasi Dukcapil.
+Prioritas: integrasi aplikasi vertikal dan perbaikan NIK.
+</td>
+</tr>
+<tr>
+<td><strong>D4 — Infrastruktur</strong></td>
+<td>
+• Listrik: PLN 15.000 VA, UPS + Genset<br>
+• Internet: Indihome 300 Mbps tapi <strong>gangguan 5 hari/bulan</strong><br>
+• Backup: <strong>Manual berkala</strong>, pernah uji restore<br>
+• Luar gedung: Tablet/HP/Laptop<br>
+• Dukungan teknis: <strong>kendala komunikasi dengan vendor</strong>
+</td>
+<td>
+• Internet stabil (gangguan 0 hari)<br>
+• Backup otomatis harian<br>
+• SLA tertulis dengan vendor<br>
+• Respons gangguan &lt;30 menit
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Stabilitas Internet &amp; Vendor).</strong><br><br>
+Gap utama: (1) Internet gangguan <strong>5 hari/bulan</strong> — sangat tinggi; (2) Backup masih manual;
+(3) <strong>Kendala komunikasi dengan vendor</strong>. Prioritas: cari ISP backup, otomatisasi backup, dan buat SLA tertulis dengan vendor.
+</td>
+</tr>
+<tr>
+<td><strong>D5 — Kesiapan SDM</strong></td>
+<td>
+• IT: <strong>1 orang khusus</strong><br>
+• RM: Ada tapi <strong>belum terlatih</strong><br>
+• Komputer: <strong>50-80%</strong><br>
+• Pelatihan: IT ikut pelatihan Dinkes<br>
+• Super-user: ada
+</td>
+<td>
+• Minimal 2 IT + 1 RM bersertifikat<br>
+• RM terlatih ICD-10/9-CM<br>
+• ≥90% staf lancar komputer
+</td>
+<td>
+⚠️ <strong>Gap Menengah (RM Belum Terlatih).</strong><br><br>
+Gap utama: (1) RM ada tapi <strong>belum terlatih</strong> → perlu pelatihan coding; (2) Hanya 1 IT → tambah 1 lagi;
+(3) Kemampuan komputer 50-80% → tingkatkan ke &gt;90%.
+</td>
+</tr>
+<tr>
+<td><strong>D6 — Kebijakan Daerah</strong></td>
+<td>
+• Kebijakan: ada<br>
+• Dinkes mengelola<br>
+• Kerjasama vendor: ada<br>
+• <strong>Perlindungan data: TIDAK ADA</strong><br>
+• <strong>Insentif SDM: TIDAK ADA</strong>
+</td>
+<td>
+• SOP perlindungan data pasien<br>
+• Insentif SDM RME
+</td>
+<td>
+🔴 <strong>Gap Kritis (Perlindungan Data &amp; Insentif).</strong><br><br>
+Meski kebijakan umum ada, dua aspek kritis hilang: (1) <strong>Perlindungan data pasien tidak ada</strong> → risiko hukum;
+(2) <strong>Insentif SDM tidak ada</strong> → risiko turnover. Prioritas: segera buat SOP PDP dan kebijakan insentif.
+</td>
+</tr>
+</tbody>
+</table>
+<div class="callout warning">
+<strong>Ringkasan Gap Sedau:</strong><br>
+Sedau memiliki integrasi SATUSEHAT <strong>terlengkap (19 modul)</strong> dan anggaran tertinggi, tetapi terkendala
+<strong>stabilitas internet (gangguan 5 hari/bulan), komunikasi vendor, RM yang belum terlatih, serta ketiadaan SOP perlindungan data dan insentif SDM</strong>.
+Prioritas: stabilitas internet, pelatihan RM, dan pembuatan SOP PDP + insentif.
+</div>
+</div>
 
-        <h4>AS-IS — Kondisi Saat Ini</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Kondisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>✅ SK Tim RME ada. SOP lengkap. Penanggung jawab tertulis. Hak akses individual. Pemantauan rutin. SOP gangguan ada. Digitalisasi masuk perencanaan.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>⚠️ Sumber: BLUD + BOK. Anggaran: Rp 9.960.000/tahun. Lisensi ditanggung Puskesmas. Rencana pengadaan: ada. Dukungan Dinkes/NGO: Tidak ada. Dana 2 tahun: pasti.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>⚠️ Aplikasi: SMARTHEALTH (PT Sisfomedika), Server Dinkes. Input ganda: 5 aplikasi (Keswa, SIGA, SITB, SIHA, SIMONA) — tertinggi di antara 6 Puskesmas. SATUSEHAT: Terintegrasi. Kirim: 65,74% (penyebab: “tidak pernah dieksplor”). P-Care: Penuh. Ekspor + API: ada. Kualitas data: NIK 100%, ICD-10 100%. Master data: bisa diekspor. ILP/CKG: terstruktur + aplikasi CKG.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>⚠️ Listrik: UPS + Genset (kapasitas tidak dirinci). Internet: Seluler (tidak ada fixed broadband). Perangkat: belum terdata. Backup: Manual berkala (belum pernah uji restore). Luar gedung: Tablet/HP/Laptop/Kertas. Dukungan teknis: 10 menit (Dinkes + vendor).</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>⚠️ IT: Rangkap tugas (tidak ada tenaga khusus). RM: 1 terlatih. Komputer: &gt;80% lancar. Pelatihan: 1x. Beban: cukup. Super-user: belum terdata. Dukungan: Dinkes + vendor, cepat.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>✅ Kebijakan: SPBE, SE Dashboard Executive. Dinkes mengelola. Format pelaporan: SPM, Stunting, TB, Dopadu, SIPD. Kerjasama vendor: ada. Perlindungan data: ada. Insentif: ada.</td>
-            </tr>
-          </tbody>
-        </table>
+<div class="puskesmas-box">
+<h3><span class="badge red">Kritis</span>5. Puskesmas Cilebak (Kuningan, Jawa Barat)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:12%">Dimensi</th>
+<th style="width:29%">Kondisi As-Is</th>
+<th style="width:29%">Kondisi To-Be</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1 — Tata Kelola Strategi</strong></td>
+<td>
+• <strong>Tidak ada SK Tim RME</strong><br>
+• <strong>Tidak ada SOP alur data</strong><br>
+• <strong>Tidak ada penanggung jawab tertulis</strong><br>
+• Hak akses: <strong>akun bersama per cluster</strong><br>
+• Pemantauan: <strong>Tidak ada</strong><br>
+• Prosedur gangguan: <strong>Tidak ada</strong> (manual di Excel)
+</td>
+<td>
+• SK Tim RME<br>
+• SOP alur data lengkap<br>
+• Penanggung jawab tertulis<br>
+• Akun individual berbasis peran<br>
+• Pemantauan rutin<br>
+• SOP contingency
+</td>
+<td>
+🔴 <strong>Gap Kritis (Fondasi Nol).</strong><br><br>
+Cilebak adalah satu-satunya Puskesmas yang <strong>tidak memiliki fondasi tata kelola sama sekali</strong>.
+Semua aspek D1 harus dibangun dari nol. Ini adalah prioritas <strong>URGENT</strong> karena tanpa tata kelola,
+aspek lain tidak bisa berjalan terstruktur.
+</td>
+</tr>
+<tr>
+<td><strong>D2 — Pendanaan &amp; Investasi</strong></td>
+<td>
+• Sumber: BOK (2026), JKN (2027)<br>
+• Anggaran: Rp 11 juta/tahun<br>
+• Lisensi: e-Simkes Rp 800rb/bln (ditanggung Puskesmas)<br>
+• <strong>Dukungan Dinkes/NGO: Tidak ada</strong><br>
+• Dana 2 tahun: pasti (JKN)
+</td>
+<td>
+• Minimal Rp 30-50 juta/tahun<br>
+• Dukungan Dinkes (helpdesk, pelatihan, co-investment)
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Dukungan Dinkes).</strong><br><br>
+Anggaran Rp 11 jt masih di bawah ideal. Gap utama: <strong>tidak ada dukungan Dinkes</strong> padahal Cilebak paling membutuhkan.
+Prioritas: advokasi Dinkes untuk dukungan intensif.
+</td>
+</tr>
+<tr>
+<td><strong>D3 — Integrasi</strong></td>
+<td>
+• Aplikasi: e-Simkes (PT Global Edutipa Informatika, vendor lokal)<br>
+• Input ganda: <strong>0</strong> (satu-satunya yang tidak ada double entry)<br>
+• SATUSEHAT: Terintegrasi, <strong>10 modul</strong><br>
+• Keberhasilan kirim: <strong>90%</strong> (kendala: jaringan/listrik)<br>
+• P-Care: Penuh<br>
+• Ekspor + API: ada (API dipegang vendor)<br>
+• Master data: campuran standar &amp; lokal<br>
+• ICD-9 jarang diisi (petugas kurang familiar)
+</td>
+<td>
+• Keberhasilan kirim ≥99%<br>
+• Master data standar nasional<br>
+• Pelatihan ICD-9-CM<br>
+• API dapat diakses Puskesmas (tidak hanya vendor)
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Infrastruktur-Driven).</strong><br><br>
+Kabar baik: tidak ada input ganda dan 10 modul sudah terkirim.
+Gap: keberhasilan kirim 90% <strong>terhambat oleh infrastruktur</strong> (listrik/jaringan), bukan oleh sistem.
+Prioritas: perbaiki infrastruktur dulu, lalu tingkatkan kirim ke ≥99%. Latih ICD-9-CM.
+</td>
+</tr>
+<tr>
+<td><strong>D4 — Infrastruktur</strong></td>
+<td>
+• Listrik: PLN <strong>2.250 VA</strong>, padam <strong>25-30 kali/bulan</strong>, hanya Genset<br>
+• Internet: <strong>Tidak ada WiFi/dedicated</strong>, hanya seluler masing-masing staf<br>
+• Backup: <strong>BELUM ADA</strong><br>
+• Luar gedung: Tablet/HP/Laptop/<strong>Kertas</strong> — sering tidak ada sinyal<br>
+• Dukungan teknis: <strong>1 hari kerja</strong> (jarak 50 km ke Dinkes)
+</td>
+<td>
+• PLN minimal 10.000 VA + UPS + Genset otomatis<br>
+• Internet dedicated (fiber/VSAT)<br>
+• Backup otomatis harian<br>
+• Modem portabel untuk luar gedung<br>
+• Respons gangguan &lt;4 jam
+</td>
+<td>
+🔴 <strong>Gap Kritis (Darurat Infrastruktur).</strong><br><br>
+Ini adalah <strong>kondisi paling darurat</strong> di antara 6 Puskesmas. Listrik padam hampir setiap hari,
+tidak ada internet dedicated, tidak ada backup, dan dukungan teknis 1 hari kerja.
+Prioritas <strong>URGENT</strong>: naikkan daya listrik, pasang internet dedicated, buat backup.
+</td>
+</tr>
+<tr>
+<td><strong>D5 — Kesiapan SDM</strong></td>
+<td>
+• IT: <strong>Tidak ada</strong><br>
+• RM: <strong>Belum ada</strong><br>
+• Komputer: <strong>&lt;50%</strong><br>
+• Pelatihan: <strong>Belum ada</strong><br>
+• Super-user: <strong>Tidak ada</strong> (password di-sharing)
+</td>
+<td>
+• Minimal 1 IT + 1 RM terlatih<br>
+• ≥90% staf lancar komputer<br>
+• Pelatihan dasar komputer untuk semua staf<br>
+• Super-user per unit
+</td>
+<td>
+🔴 <strong>Gap Kritis (Krisis SDM).</strong><br><br>
+Cilebak tidak memiliki satu pun tenaga IT maupun Perekam Medis. Kemampuan komputer staf di bawah 50%.
+Ini adalah <strong>krisis SDM</strong> yang harus segera diatasi.
+Prioritas <strong>URGENT</strong>: rekrut/angkat minimal 1 IT + 1 RM, dan latih seluruh staf komputer dasar.
+</td>
+</tr>
+<tr>
+<td><strong>D6 — Kebijakan Daerah</strong></td>
+<td>
+• Kebijakan: <strong>Tidak ada</strong><br>
+• Dinkes: <strong>Puskesmas mandiri</strong><br>
+• Format pelaporan: <strong>Tidak ada</strong> (hanya standar Kemenkes)<br>
+• Kerjasama vendor: <strong>Tidak ada</strong><br>
+• Perlindungan data: <strong>Tidak ada</strong> (hanya NDA dengan vendor)<br>
+• Insentif SDM: <strong>Tidak ada</strong>
+</td>
+<td>
+• Perbup/SK RME dari Dinkes<br>
+• SOP perlindungan data pasien<br>
+• MoU vendor dengan kepemilikan data<br>
+• Insentif SDM
+</td>
+<td>
+🔴 <strong>Gap Kritis (Kebijakan Nol).</strong><br><br>
+Cilebak dibiarkan <strong>mandiri tanpa payung hukum</strong> dalam satu kabupaten yang sama dengan Maleber
+(yang didukung Perbup). Prioritas <strong>URGENT</strong>: advokasi Dinkes Kuningan untuk menerbitkan payung hukum,
+SOP PDP, dan MoU vendor.
+</td>
+</tr>
+</tbody>
+</table>
+<div class="callout danger">
+<strong>Ringkasan Gap Cilebak:</strong><br>
+Cilebak menghadapi <strong>krisis multidimensi</strong>: tidak ada tata kelola, infrastruktur darurat
+(listrik padam 25-30x/bulan, tidak ada internet), tidak ada SDM IT/RM, dan tidak ada dukungan kebijakan daerah.
+Ini membutuhkan <strong>intervensi darurat terkoordinasi</strong> dari Dinkes Kuningan.
+Prioritas: tata kelola dasar, infrastruktur listrik/internet, rekrutmen SDM, dan payung hukum.
+</div>
+</div>
 
-        <h4>TO-BE — Yang Harus Dicapai</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Target</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>Pertahankan.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>Advokasi Dinkes untuk dukungan teknis/finansial (saat ini tidak ada). Tingkatkan anggaran.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>Prioritas utama: tingkatkan keberhasilan kirim SATUSEHAT dari 65,74% → ≥99%. Lakukan eksplorasi dan pelatihan modul SATUSEHAT. Kurangi input ganda dari 5 → 0 (integrasi SITB, SIGA, dll).</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>Ganti internet seluler dengan fixed broadband/fiber. Tambah kapasitas UPS. Ubah backup dari manual → otomatis harian. Uji restore. Hilangkan pencatatan kertas di luar gedung.</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>Angkat tenaga IT khusus (tidak rangkap). Tambah super-user per unit.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>Pertahankan. Sudah baik.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<div class="puskesmas-box">
+<h3><span class="badge red">Data Belum Lengkap</span>6. Puskesmas Bener (Purworejo, Jawa Tengah)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:12%">Dimensi</th>
+<th style="width:29%">Kondisi As-Is</th>
+<th style="width:29%">Kondisi To-Be</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1 — Tata Kelola Strategi</strong></td>
+<td>
+• SK Tim RME: ada (8 orang, <strong>diisi konsultan SCA</strong>)<br>
+• SOP: lengkap (<strong>diisi konsultan</strong>)<br>
+• Penanggung jawab: tertulis<br>
+• Hak akses: <strong>akun bersama untuk antrian</strong><br>
+• Pemantauan: rutin tapi <strong>&gt;30% gagal kirim</strong> (duplikat)<br>
+• Prosedur gangguan: ada
+</td>
+<td>
+• Validasi internal (kepemilikan Puskesmas, bukan konsultan)<br>
+• Akun individual (tidak ada akun bersama)<br>
+• Keberhasilan kirim ≥99%
+</td>
+<td>
+🔴 <strong>Gap Kritis (Kepemilikan &amp; Validasi).</strong><br><br>
+Masalah utama: <strong>data diisi oleh konsultan</strong>, bukan oleh Puskesmas sendiri.
+Ini mengindikasikan <strong>kepemilikan internal yang lemah</strong>. Selain itu, akun bersama untuk antrian
+dan &gt;30% gagal kirim harus segera diatasi.
+Prioritas <strong>URGENT</strong>: validasi seluruh jawaban dan pastikan kepemilikan internal.
+</td>
+</tr>
+<tr>
+<td><strong>D2 — Pendanaan &amp; Investasi</strong></td>
+<td>
+• Sumber: BLUD<br>
+• <strong>Anggaran IT: BELUM DIISI</strong><br>
+• <strong>Lisensi: BELUM DIISI</strong><br>
+• <strong>Rencana pengadaan: BELUM DIISI</strong><br>
+• <strong>Dukungan Dinkes: BELUM DIISI</strong><br>
+• <strong>Kepastian dana: BELUM DIISI</strong>
+</td>
+<td>
+• Seluruh data pendanaan terisi<br>
+• Minimal Rp 30-50 juta/tahun<br>
+• Perencanaan anggaran IT eksplisit
+</td>
+<td>
+🔴 <strong>Gap Kritis (Data Kosong).</strong><br><br>
+Seluruh item D2 <strong>belum diisi</strong>. Ini adalah blank spot total.
+Prioritas <strong>URGENT</strong>: lengkapi seluruh data pendanaan dan buat perencanaan anggaran IT eksplisit.
+</td>
+</tr>
+<tr>
+<td><strong>D3 — Integrasi</strong></td>
+<td>
+• Aplikasi: Cloud vendor<br>
+• <strong>Input ganda: BELUM DIISI</strong><br>
+• <strong>SATUSEHAT: BELUM DIISI</strong><br>
+• <strong>Kirim: BELUM DIISI</strong><br>
+• <strong>P-Care: BELUM DIISI</strong><br>
+• <strong>Ekspor/API: BELUM DIISI</strong><br>
+• <strong>Kualitas data: BELUM DIISI</strong>
+</td>
+<td>
+• Seluruh data integrasi terisi<br>
+• SATUSEHAT terintegrasi<br>
+• P-Care bridging penuh
+</td>
+<td>
+🔴 <strong>Gap Kritis (Data Kosong).</strong><br><br>
+Seluruh item D3 <strong>belum diisi</strong>. Tidak bisa dilakukan analisis integrasi tanpa data.
+Prioritas <strong>URGENT</strong>: lengkapi seluruh data integrasi dan pastikan SATUSEHAT serta P-Care terintegrasi.
+</td>
+</tr>
+<tr>
+<td><strong>D4 — Infrastruktur</strong></td>
+<td>
+• <strong>Seluruh item D4 BELUM DIISI</strong> (listrik, internet, perangkat, backup, luar gedung, dukungan teknis)
+</td>
+<td>
+• Assessment infrastruktur lengkap<br>
+• Listrik + UPS + Genset<br>
+• Internet dedicated<br>
+• Backup otomatis
+</td>
+<td>
+🔴 <strong>Gap Kritis (Data Kosong).</strong><br><br>
+Seluruh item D4 <strong>belum diisi</strong>. Tidak bisa dilakukan assessment infrastruktur.
+Prioritas <strong>URGENT</strong>: lengkapi data dan lakukan assessment kebutuhan listrik, internet, perangkat, dan backup.
+</td>
+</tr>
+<tr>
+<td><strong>D5 — Kesiapan SDM</strong></td>
+<td>
+• <strong>Seluruh item D5 BELUM DIISI</strong> (IT, RM, komputer, pelatihan, beban, super-user, dukungan)
+</td>
+<td>
+• Assessment SDM lengkap<br>
+• Minimal 1 IT + 1 RM terlatih
+</td>
+<td>
+🔴 <strong>Gap Kritis (Data Kosong).</strong><br><br>
+Seluruh item D5 <strong>belum diisi</strong>. Tidak bisa dilakukan assessment SDM.
+Prioritas <strong>URGENT</strong>: lengkapi data dan assessment kebutuhan IT serta RM.
+</td>
+</tr>
+<tr>
+<td><strong>D6 — Kebijakan Daerah</strong></td>
+<td>
+• Kebijakan: <strong>Tidak ada</strong><br>
+• Peran Dinkes: belum terdata<br>
+• Format pelaporan: <strong>Tidak ada</strong><br>
+• Kerjasama vendor: ada<br>
+• Perlindungan data: ada (MoU vendor)<br>
+• Insentif SDM: <strong>Tidak ada</strong>
+</td>
+<td>
+• Perbup/SK RME dari Dinkes<br>
+• Kebijakan insentif SDM
+</td>
+<td>
+⚠️ <strong>Gap Menengah (Kebijakan).</strong><br><br>
+Beberapa aspek sudah ada (MoU vendor, perlindungan data via MoU).
+Gap: tidak ada kebijakan daerah dan insentif SDM.
+Prioritas: advokasi Dinkes Purworejo untuk Perbup/SK RME dan kebijakan insentif.
+</td>
+</tr>
+</tbody>
+</table>
+<div class="callout danger">
+<strong>Ringkasan Gap Bener:</strong><br>
+Bener memiliki masalah <strong>kelengkapan data yang paling parah</strong> — hampir seluruh item D2, D3, D4, dan D5
+<strong>belum diisi</strong>. Bahkan data yang ada di D1 diisi oleh <strong>konsultan</strong>, bukan Puskesmas sendiri.
+Ini mengindikasikan <strong>kepemilikan internal yang sangat lemah</strong>.
+Prioritas utama: <strong>fasilitasi pengisian seluruh data survei</strong>, validasi kepemilikan internal,
+dan assessment menyeluruh sebelum intervensi lebih lanjut.
+</div>
+</div>
+</section>
 
-      <div class="puskesmas-box">
-        <h3><span class="badge yellow">Menengah</span>4. Puskesmas Sedau (Lombok Barat, NTB)</h3>
+<section id="rekomendasi" class="card">
+<h2>💡 Rekomendasi Strategis</h2>
 
-        <h4>AS-IS — Kondisi Saat Ini</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Kondisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>✅ SK Tim RME ada (No. 05.5/SK/PKM.Sdu/I/2025). SOP lengkap. Penanggung jawab tertulis (Rizki Wahyudi, S.Kom). Hak akses individual. Pemantauan rutin. SOP gangguan ada.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>✅ Sumber: BLUD. Anggaran: Rp 21.000.000/tahun (tertinggi di antara 6). Lisensi ditanggung Puskesmas. Rencana pengadaan: BOP. Dukungan: ada (tapi belum ada bukti). Dana 2 tahun: pasti.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>✅ Aplikasi: Epuskesmas V3 NextGen (Infokes). Input ganda: 4 aplikasi (ASIK, SITB, BPJS, Sisrute, Klinisia). SATUSEHAT: Terintegrasi, 18 modul terkirim (terlengkap). Kirim: 98-100%. P-Care: Penuh. Ekspor: ada. Kualitas data: NIK 95%, ICD-10 100%, ICD-9 100%, KFA 100%. Master data: bisa diekspor. ILP/CKG: aplikasi CKG.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>⚠️ Listrik: PLN 15.000 VA, UPS + Genset. Internet: Indihome 300 Mbps tapi gangguan 5 hari/bulan. Perangkat: belum terdata. Backup: Manual berkala, pernah uji restore. Luar gedung: Tablet/HP/Laptop. Dukungan teknis: kendala komunikasi dengan vendor.</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>⚠️ IT: 1 orang khusus. RM: Ada tapi belum terlatih. Komputer: 50-80%. Pelatihan: IT ikut pelatihan Dinkes. Beban: belum terdata. Super-user: ada. Dukungan: belum terdata.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>⚠️ Kebijakan: ada. Dinkes mengelola. Kerjasama vendor: ada. Perlindungan data: TIDAK ADA. Insentif SDM: TIDAK ADA.</td>
-            </tr>
-          </tbody>
-        </table>
+<h3>A. Jangka Pendek (0-6 bulan)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:5%">No</th>
+<th>Aksi</th>
+<th style="width:25%">Sasaran</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><strong>Intervensi darurat Cilebak:</strong> SK Tim RME, SOP, rekrutmen IT/RM, upgrade listrik, pasang internet dedicated.</td><td>Cilebak</td></tr>
+<tr><td>2</td><td><strong>Kelengkapan data Bener:</strong> Fasilitasi pengisian seluruh butir survei yang belum terisi. Validasi data konsultan.</td><td>Bener</td></tr>
+<tr><td>3</td><td><strong>Perbaikan backup:</strong> Buat backup mandiri di Narmada, Sedau, Panggang I. Uji restore.</td><td>Narmada, Sedau, Panggang I</td></tr>
+<tr><td>4</td><td><strong>Pelatihan SATUSEHAT Panggang I:</strong> Tingkatkan keberhasilan kirim dari 65,74% → ≥95%.</td><td>Panggang I</td></tr>
+<tr><td>5</td><td><strong>SOP Perlindungan Data:</strong> Buat di Sedau dan Cilebak.</td><td>Sedau, Cilebak</td></tr>
+</tbody>
+</table>
 
-        <h4>TO-BE — Yang Harus Dicapai</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Target</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>Pertahankan.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>Pertahankan anggaran (sudah tertinggi). Dokumentasikan bukti dukungan Dinkes.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>Kurangi input ganda dari 4 → 0. Tingkatkan validitas NIK (95% → 100%).</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>Selesaikan masalah gangguan internet (5 hari/bulan → 0). Pertimbangkan ISP backup. Ubah backup dari manual → otomatis. Perbaiki komunikasi dengan vendor (SLA tertulis, kontak PIC jelas).</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>Latih Perekam Medis (belum terlatih → terlatih ICD-10/9-CM). Tambah 1 tenaga IT (1 → 2). Tingkatkan kemampuan komputer (50-80% → &gt;90%).</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>Segera buat SOP Perlindungan Data Pribadi. Buat kebijakan insentif SDM RME.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<h3>B. Jangka Menengah (6-18 bulan)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:5%">No</th>
+<th>Aksi</th>
+<th style="width:25%">Sasaran</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>6</td><td><strong>Regulasi daerah:</strong> Perbup/SK RME di Kuningan (untuk Cilebak), Purworejo (untuk Bener). Konfirmasi Perbup Lombok Barat.</td><td>Semua kabupaten</td></tr>
+<tr><td>7</td><td><strong>Standardisasi anggaran IT:</strong> Minimal Rp 30 juta/tahun per Puskesmas. Subsidi lisensi dari Dinkes.</td><td>Semua</td></tr>
+<tr><td>8</td><td><strong>Penghapusan double entry:</strong> Integrasi SITB, SIGA, SIHA, ASIK ke SATUSEHAT/SIMPUS.</td><td>Panggang I, Sedau</td></tr>
+<tr><td>9</td><td><strong>Rekrutmen SDM:</strong> Minimal 1 IT + 1 RM terlatih per Puskesmas.</td><td>Cilebak, Panggang I, Sedau</td></tr>
+<tr><td>10</td><td><strong>Upgrade infrastruktur:</strong> Internet fixed broadband di Cilebak &amp; Panggang I. UPS di semua Puskesmas.</td><td>Cilebak, Panggang I</td></tr>
+</tbody>
+</table>
 
-      <div class="puskesmas-box">
-        <h3><span class="badge red">Kritis</span>5. Puskesmas Cilebak (Kuningan, Jawa Barat)</h3>
+<h3>C. Jangka Panjang (18-36 bulan)</h3>
+<table>
+<thead>
+<tr>
+<th style="width:5%">No</th>
+<th>Aksi</th>
+<th style="width:25%">Sasaran</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>11</td><td><strong>Satu platform per kabupaten:</strong> Konsolidasi vendor SIMPUS untuk standardisasi data dan efisiensi dukungan teknis.</td><td>Semua kabupaten</td></tr>
+<tr><td>12</td><td><strong>Zero double entry nasional:</strong> Seluruh aplikasi program terintegrasi via SATUSEHAT.</td><td>Semua</td></tr>
+<tr><td>13</td><td><strong>Sertifikasi SDM:</strong> Seluruh Perekam Medis tersertifikasi ICD-10/9-CM. Seluruh IT tersertifikasi manajemen SIK.</td><td>Semua</td></tr>
+<tr><td>14</td><td><strong>Audit keamanan &amp; perlindungan data:</strong> Implementasi penuh UU PDP di seluruh Puskesmas. Audit tahunan.</td><td>Semua</td></tr>
+<tr><td>15</td><td><strong>Roadmap 5 tahun:</strong> Rencana induk transformasi digital per kabupaten, terintegrasi dengan Renstra Dinkes dan RPJMD.</td><td>Semua kabupaten</td></tr>
+</tbody>
+</table>
+</section>
 
-        <h4>AS-IS — Kondisi Saat Ini</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Kondisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>🔴 Tidak ada SK Tim RME. Tidak ada SOP alur data. Tidak ada penanggung jawab tertulis. Hak akses: akun bersama per cluster. Pemantauan: Tidak ada (hanya kirim ke link). Prosedur gangguan: Tidak ada (manual di Excel, input ulang). Digitalisasi masuk perencanaan (di bagian administrasi).</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>⚠️ Sumber: BOK (2026), JKN (2027). Anggaran: Rp 11.000.000/tahun (internet 9jt + pemeliharaan 2jt). Lisensi: e-Simkes Rp 800rb/bln (ditanggung Puskesmas). Rencana pengadaan: BOK/JKN. Dukungan Dinkes/NGO: Tidak ada. Dana 2 tahun: pasti (JKN).</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>⚠️ Aplikasi: e-Simkes (PT Global Edutipa Informatika, vendor lokal Kuningan). Input ganda: 0 (satu-satunya yang tidak ada double entry). SATUSEHAT: Terintegrasi, 10 modul. Kirim: 90% (kendala: jaringan/listrik). P-Care: Penuh. Ekspor + API: ada (API dipegang vendor). Kualitas data: NIK 100%, ICD-10 100%, KFA 100%. Catatan: ICD-9 jarang diisi, petugas kurang familiar. Master data: hanya bisa dilihat, campuran standar &amp; lokal. ILP/CKG: terstruktur + aplikasi CKG.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>🔴 Listrik: PLN 2.250 VA, padam 25-30 kali/bulan, hanya Genset. Sedang mengajukan ke 10.000 VA tapi terkendala biaya. Internet: Tidak ada WiFi/dedicated, hanya seluler masing-masing staf. Perangkat: belum terdata. Backup: BELUM ADA. Luar gedung: Tablet/HP/Laptop/Kertas — sering tidak ada sinyal. Dukungan teknis: 1 hari kerja (jarak 50 km ke Dinkes).</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>🔴 IT: Tidak ada. RM: Belum ada. Komputer: &lt;50%. Pelatihan: Belum ada (catatan: RM belum termasuk 13 tenaga dasar). Beban: cukup. Super-user: Tidak ada (password di-sharing). Dukungan: tanya vendor.</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>🔴 Kebijakan: Tidak ada. Dinkes: Puskesmas mandiri. Format pelaporan: Tidak ada (hanya standar Kemenkes). Kerjasama vendor: Tidak ada. Perlindungan data: Tidak ada (hanya NDA dengan vendor). Insentif SDM: Tidak ada.</td>
-            </tr>
-          </tbody>
-        </table>
+<footer>
+Dokumen ini disusun berdasarkan data survei per 8 November 2026. Seluruh temuan bersifat indikatif dan memerlukan verifikasi lapangan lebih lanjut.
+</footer>
 
-        <h4>TO-BE — Yang Harus Dicapai</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Target</th>
-              <th style="width: 12%;">Prioritas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>Buat SK Tim RME, SOP alur data, tunjuk penanggung jawab, terapkan akun individual, buat prosedur contingency.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>Pertahankan anggaran. Advokasi Dinkes untuk dukungan (saat ini 0).</td>
-              <td><span class="badge yellow">Menengah</span></td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>Pertahankan integrasi. Tingkatkan kirim dari 90% → ≥99% (selesaikan kendala listrik/internet dulu). Standarisasi master data. Latih ICD-9-CM.</td>
-              <td><span class="badge yellow">Menengah</span></td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>Naikkan daya listrik (2.250 → 10.000 VA). Pasang internet dedicated. Buat backup data. Sediakan modem untuk luar gedung.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>Rekrut/angkat minimal 1 IT + 1 Perekam Medis. Latih seluruh staf komputer dasar. Buat super-user.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>Advokasi Dinkes Kuningan untuk payung hukum. Buat SOP perlindungan data. Buat MoU vendor.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+</div>
 
-      <div class="puskesmas-box">
-        <h3><span class="badge red">Data Belum Lengkap</span>6. Puskesmas Bener (Purworejo, Jawa Tengah)</h3>
+<a href="#daftar-isi" class="floating-toc" title="Kembali ke Daftar Isi">↑ Daftar Isi</a>
 
-        <h4>AS-IS — Kondisi Saat Ini</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Kondisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>⚠️ SK Tim RME: ada (8 orang, diisi konsultan SCA). SOP: lengkap (diisi konsultan). Penanggung jawab: tertulis. Perencanaan: ada (DPA 2026, sarpras, pelatihan tidak spesifik). Hak akses: akun bersama untuk antrian. Pemantauan: rutin tapi &gt;30% gagal kirim (duplikat). Prosedur gangguan: ada.</td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>🔴 Sumber: BLUD. Anggaran IT: BELUM DIISI. Lisensi: BELUM DIISI. Rencana pengadaan: BELUM DIISI. Dukungan Dinkes: BELUM DIISI. Kepastian dana: BELUM DIISI.</td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>🔴 Aplikasi: Cloud vendor. Input ganda: BELUM DIISI. SATUSEHAT: BELUM DIISI. Kirim: BELUM DIISI. P-Care: BELUM DIISI. Ekspor/API: BELUM DIISI. Kualitas data: BELUM DIISI. ILP/CKG: BELUM DIISI. Master data: BELUM DIISI.</td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>🔴 Seluruh item D4 BELUM DIISI (listrik, internet, perangkat, backup, luar gedung, dukungan teknis).</td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>🔴 Seluruh item D5 BELUM DIISI (IT, RM, komputer, pelatihan, beban, super-user, dukungan).</td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>⚠️ Kebijakan: Tidak ada. Peran Dinkes: belum terdata. Format pelaporan: Tidak ada. Kerjasama vendor: ada. Perlindungan data: ada (MoU vendor). Insentif SDM: Tidak ada.</td>
-            </tr>
-          </tbody>
-        </table>
+<script>
+(function(){
+function initNavigasiDaftarIsi(){
+if(window.__navigasiDaftarIsiApplied)return;
+window.__navigasiDaftarIsiApplied=true;
 
-        <h4>TO-BE — Yang Harus Dicapai</h4>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 12%;">Dimensi</th>
-              <th>Target</th>
-              <th style="width: 12%;">Prioritas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>D1</strong></td>
-              <td>Validasi seluruh jawaban yang diisi konsultan. Pastikan kepemilikan internal. Hilangkan akun bersama. Selesaikan masalah &gt;30% gagal kirim.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D2</strong></td>
-              <td>Segera lengkapi seluruh data pendanaan. Buat perencanaan anggaran IT eksplisit.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D3</strong></td>
-              <td>Lengkapi seluruh data integrasi. Pastikan SATUSEHAT dan P-Care terintegrasi.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D4</strong></td>
-              <td>Lengkapi seluruh data infrastruktur. Assessment kebutuhan listrik, internet, perangkat, backup.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D5</strong></td>
-              <td>Lengkapi seluruh data SDM. Assessment kebutuhan IT dan RM.</td>
-              <td><span class="badge red">URGENT</span></td>
-            </tr>
-            <tr>
-              <td><strong>D6</strong></td>
-              <td>Advokasi Dinkes Purworejo untuk Perbup/SK RME. Buat kebijakan insentif SDM.</td>
-              <td><span class="badge yellow">Menengah</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+var toc=document.querySelector('.toc');
+if(toc&&!toc.id){toc.id='daftar-isi';}
 
-    <section id="rekomendasi" class="card">
-      <h2>💡 Rekomendasi Strategis</h2>
+var sections=document.querySelectorAll('section.card');
+sections.forEach(function(section){
+if(section.classList.contains('toc'))return;
 
-      <h3>A. Jangka Pendek (0-6 bulan)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 5%;">No</th>
-            <th>Aksi</th>
-            <th style="width: 25%;">Sasaran</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td><strong>Intervensi darurat Cilebak:</strong> SK Tim RME, SOP, rekrutmen IT/RM, upgrade listrik, pasang internet dedicated.</td>
-            <td>Cilebak</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><strong>Kelengkapan data Bener:</strong> Fasilitasi pengisian seluruh butir survei yang belum terisi. Validasi data konsultan.</td>
-            <td>Bener</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><strong>Perbaikan backup:</strong> Buat backup mandiri di Narmada, Sedau, Panggang I. Uji restore.</td>
-            <td>Narmada, Sedau, Panggang I</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td><strong>Pelatihan SATUSEHAT Panggang I:</strong> Tingkatkan keberhasilan kirim dari 65,74% → ≥95%.</td>
-            <td>Panggang I</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td><strong>SOP Perlindungan Data:</strong> Buat di Sedau dan Cilebak.</td>
-            <td>Sedau, Cilebak</td>
-          </tr>
-        </tbody>
-      </table>
+if(!section.querySelector('.back-to-toc')){
+var h2=section.querySelector('h2');
+if(h2){
+var topLink=document.createElement('div');
+topLink.className='back-to-toc';
+topLink.innerHTML='<a href="#daftar-isi">⬅ Kembali ke Daftar Isi</a>';
+h2.insertAdjacentElement('afterend',topLink);
+}
+}
 
-      <h3>B. Jangka Menengah (6-18 bulan)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 5%;">No</th>
-            <th>Aksi</th>
-            <th style="width: 25%;">Sasaran</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>6</td>
-            <td><strong>Regulasi daerah:</strong> Perbup/SK RME di Kuningan (untuk Cilebak), Purworejo (untuk Bener). Konfirmasi Perbup Lombok Barat.</td>
-            <td>Semua kabupaten</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td><strong>Standardisasi anggaran IT:</strong> Minimal Rp 30 juta/tahun per Puskesmas. Subsidi lisensi dari Dinkes.</td>
-            <td>Semua</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td><strong>Penghapusan double entry:</strong> Integrasi SITB, SIGA, SIHA, ASIK ke SATUSEHAT/SIMPUS.</td>
-            <td>Panggang I, Sedau</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td><strong>Rekrutmen SDM:</strong> Minimal 1 IT + 1 RM terlatih per Puskesmas.</td>
-            <td>Cilebak, Panggang I, Sedau</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td><strong>Upgrade infrastruktur:</strong> Internet fixed broadband di Cilebak &amp; Panggang I. UPS di semua Puskesmas.</td>
-            <td>Cilebak, Panggang I</td>
-          </tr>
-        </tbody>
-      </table>
+if(!section.querySelector('.back-to-toc.bottom')){
+var bottomLink=document.createElement('div');
+bottomLink.className='back-to-toc bottom';
+bottomLink.innerHTML='<a href="#daftar-isi">⬅ Kembali ke Daftar Isi</a>';
+section.appendChild(bottomLink);
+}
+});
 
-      <h3>C. Jangka Panjang (18-36 bulan)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 5%;">No</th>
-            <th>Aksi</th>
-            <th style="width: 25%;">Sasaran</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>11</td>
-            <td><strong>Satu platform per kabupaten:</strong> Konsolidasi vendor SIMPUS untuk standardisasi data dan efisiensi dukungan teknis.</td>
-            <td>Semua kabupaten</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td><strong>Zero double entry nasional:</strong> Seluruh aplikasi program terintegrasi via SATUSEHAT.</td>
-            <td>Semua</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td><strong>Sertifikasi SDM:</strong> Seluruh Perekam Medis tersertifikasi ICD-10/9-CM. Seluruh IT tersertifikasi manajemen SIK.</td>
-            <td>Semua</td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td><strong>Audit keamanan &amp; perlindungan data:</strong> Implementasi penuh UU PDP di seluruh Puskesmas. Audit tahunan.</td>
-            <td>Semua</td>
-          </tr>
-          <tr>
-            <td>15</td>
-            <td><strong>Roadmap 5 tahun:</strong> Rencana induk transformasi digital per kabupaten, terintegrasi dengan Renstra Dinkes dan RPJMD.</td>
-            <td>Semua kabupaten</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+link.addEventListener('click',function(event){
+var hash=this.getAttribute('href');
+if(!hash||hash==='#')return;
 
-    <footer>
-      Dokumen ini disusun berdasarkan data survei per 8 November 2026. Seluruh temuan bersifat indikatif dan memerlukan verifikasi lapangan lebih lanjut.
-    </footer>
+var target=document.querySelector(hash);
+if(!target)return;
 
-  </div>
+event.preventDefault();
+target.scrollIntoView({behavior:'smooth',block:'start'});
+
+if(history.pushState){
+history.pushState(null,null,hash);
+}else{
+window.location.hash=hash;
+}
+});
+});
+}
+
+if(document.readyState==='loading'){
+document.addEventListener('DOMContentLoaded',initNavigasiDaftarIsi);
+}else{
+initNavigasiDaftarIsi();
+}
+})();
+</script>
+
 </body>
 </html>
